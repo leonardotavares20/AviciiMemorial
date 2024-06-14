@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Avicii</title>
 	<meta name="description" content="Avicii" />
 </svelte:head>
 

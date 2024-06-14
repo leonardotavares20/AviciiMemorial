@@ -20,6 +20,6 @@
   .navigation
         width: 93%
         display: grid
-        grid-template-columns: 1fr 4.5fr 1.2fr
+        grid-template-columns: 1fr 3fr 1.2fr
         align-items: center
 </style>
