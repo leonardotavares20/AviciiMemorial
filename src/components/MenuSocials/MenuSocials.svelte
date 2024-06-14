@@ -1,6 +1,6 @@
 <script>
   import Menu from "../Menu/Menu.svelte";
-  import Ancor from "../Ancor/Ancor.svelte";
+  import Anchor from "../Anchor/Anchor.svelte";
   import AppleIcon from "/icons/apple.svg";
   import SpotifyIcon from "/icons/spotify.svg";
   import YoutubeIcon from "/icons/youtube.svg";
@@ -8,15 +8,15 @@
 
 <header>
   <Menu menuSocials>
-    <Ancor href={"/"}>
+    <Anchor href={"/"}>
       <img class="icon" src={SpotifyIcon} alt="Spotify" />
-    </Ancor>
-    <Ancor href={"/"}>
+    </Anchor>
+    <Anchor href={"/"}>
       <img class="icon" src={YoutubeIcon} alt="Spotify" />
-    </Ancor>
-    <Ancor href={"/"}>
+    </Anchor>
+    <Anchor href={"/"}>
       <img class="icon" src={AppleIcon} alt="Spotify" />
-    </Ancor>
+    </Anchor>
   </Menu>
 </header>
 
