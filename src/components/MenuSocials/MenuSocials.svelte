@@ -1,21 +1,18 @@
 <script>
   import Menu from "../Menu/Menu.svelte";
   import Anchor from "../Anchor/Anchor.svelte";
-  import AppleIcon from "/icons/apple.svg";
-  import SpotifyIcon from "/icons/spotify.svg";
-  import YoutubeIcon from "/icons/youtube.svg";
 </script>
 
 <header>
   <Menu menuSocials>
     <Anchor href={"/"}>
-      <img class="icon" src={SpotifyIcon} alt="Spotify" />
+      <img class="icon" src="/icons/spotify.svg" alt="Spotify" />
     </Anchor>
     <Anchor href={"/"}>
-      <img class="icon" src={YoutubeIcon} alt="Spotify" />
+      <img class="icon" src="/icons/youtube.svg" alt="Youtube" />
     </Anchor>
     <Anchor href={"/"}>
-      <img class="icon" src={AppleIcon} alt="Spotify" />
+      <img class="icon" src="/icons/apple.svg" alt="Apple Music" />
     </Anchor>
   </Menu>
 </header>

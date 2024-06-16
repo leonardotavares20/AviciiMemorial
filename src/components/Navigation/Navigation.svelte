@@ -12,7 +12,7 @@
         display: flex
         justify-content: center
         background: black
-        position: fixed
+        position: sticky
         top: 0
         height: 150px
         margin-bottom: 2.5rem

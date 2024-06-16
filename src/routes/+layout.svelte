@@ -1,20 +1,19 @@
 <script>
-	import Header from '../components/Header/Header.svelte';
-	import "../styles/init.sass"
+  import Header from "../components/Header/Header.svelte";
+  import "../styles/init.sass";
+  import HoverCard from "../components/HoverCard/HoverCard.svelte";
 </script>
 
 <div class="app">
-	<Header />
+  <Header />
+  
+  <main>
+	  <HoverCard />
+    <slot />
+  </main>
 
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		
-	</footer>
+  <footer></footer>
 </div>
 
 <style>
-	
 </style>
