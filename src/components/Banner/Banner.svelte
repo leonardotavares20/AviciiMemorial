@@ -1,11 +1,15 @@
 <script lang="ts">
+  
 </script>
 
-<div>
-  <img class="banner" src="/banner/bannerTim.jpg" alt="" />
+<div class="containerBanner">
+  <img class="containerBanner__banner" src="/banner/bannerTim.jpg" alt="" />
 </div>
 
 <style lang="sass">
-    .banner
+    .containerBanner
+      transform: translateY(-190px)
+
+    .containerBanner__banner
         width: 100%
 </style>
