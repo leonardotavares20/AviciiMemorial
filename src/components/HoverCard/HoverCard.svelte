@@ -1,27 +1,49 @@
 <script lang="ts">
-  import Select from "../Select/Select.svelte";
-  interface EventOption {
-    detail: string;
-  }
-  
-  let options = [
-    { value: "brazil", label: "Brazil" },
-    { value: "eua", label: "EUA" },
-  ];
+  import FormCard from "../FormCard/FormCard.svelte";
 
-  const getOptionHandler = (event: EventOption) => {
-    console.log(event.detail);
-  };
+  export let mouseEnterOverlay = true;
 </script>
 
-<div class="hoverCard">
-  <Select on:changeOption={getOptionHandler} {options} />
+<div class="overlay" class:overlay--pointerEvent={mouseEnterOverlay}>
+  <div class="hoverCard" class:hoverCard--visible={mouseEnterOverlay}>
+    <img
+      class="hoverCard__arrow"
+      src="/arrows/arrowHoverCard.svg"
+      alt=""
+      aria-hidden="true"
+    />
+    <FormCard />
+  </div>
 </div>
 
 <style lang="sass">
+    .overlay
+      height: 100px
+      position: absolute
+      width: 202px
+      pointer-events: none
+
+    .overlay--pointerEvent
+      pointer-events: auto
+
     .hoverCard
-        width: 24rem
-        padding: 1rem
-        background-color: black
-        color: white
+      padding: 1rem
+      color: white
+      width: 22rem
+      top: 70%
+      margin-top: 2.3rem
+      background-color: black
+      border: 1px solid #434343
+      transform: translateX(-100px)
+      transition: 0.2s ease
+      opacity: 0
+
+    .hoverCard--visible
+      opacity: 1
+      transition: 0.2s ease
+
+    .hoverCard__arrow
+      position: absolute
+      transform: translateY(-34px)
+
 </style>

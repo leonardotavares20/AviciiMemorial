@@ -2,9 +2,11 @@
   import HoverCard from "../HoverCard/HoverCard.svelte";
   import Anchor from "../Anchor/Anchor.svelte";
   import Menu from "../Menu/Menu.svelte";
+  import HoverOverlay from "../HoverOverlay/HoverOverlay.svelte";
+  
   let mouseEnter: boolean = false;
 
-  const mouseEnterHandler = (event: Event) => {
+const mouseEnterHandler = (event: Event) => {
     mouseEnter = true;
   };
 
@@ -16,14 +18,12 @@
 <Menu menuLinks>
   <Anchor href={"/"} ancorMenu>Tim Bergling Foundation</Anchor>
   <Anchor href={"/"} ancorMenu>Avicii Experience</Anchor>
-  <Anchor
+  <HoverOverlay
     on:mouseEnterAnchor={mouseEnterHandler}
     on:mouseLeaveAnchor={mouseLeaveHandler}
-    href={"/"}
-    ancorMenu>Join The Community</Anchor
   >
+    <Anchor href={""} ancorMenu>Join The Community</Anchor>
+    <HoverCard mouseEnterOverlay={true} />
+  </HoverOverlay>
   <Anchor href={"/"} ancorMenu>Shop</Anchor>
-  {#if mouseEnter}
-    <button>Oi</button>
-  {/if}
 </Menu>

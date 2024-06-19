@@ -6,13 +6,13 @@
 <header>
   <Menu menuSocials>
     <Anchor href={"/"}>
-      <img class="icon" src="/icons/spotify.svg" alt="Spotify" />
+      <img class="icon" src="/iconsSocials/spotify.svg" alt="Spotify" />
     </Anchor>
     <Anchor href={"/"}>
-      <img class="icon" src="/icons/youtube.svg" alt="Youtube" />
+      <img class="icon" src="/iconsSocials/youtube.svg" alt="Youtube" />
     </Anchor>
     <Anchor href={"/"}>
-      <img class="icon" src="/icons/apple.svg" alt="Apple Music" />
+      <img class="icon" src="/iconsSocials/apple.svg" alt="Apple Music" />
     </Anchor>
   </Menu>
 </header>

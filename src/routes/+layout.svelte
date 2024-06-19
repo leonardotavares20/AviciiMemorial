@@ -6,9 +6,8 @@
 
 <div class="app">
   <Header />
-  
+
   <main>
-	  <HoverCard />
     <slot />
   </main>
 

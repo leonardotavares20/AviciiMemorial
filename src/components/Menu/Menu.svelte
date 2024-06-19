@@ -11,7 +11,8 @@
         justify-content: center
         align-self: center
         align-items: center
-        gap: 1.3rem
+        gap: 3rem
+        list-style-type: none
 
     .menuSocials
         display: flex
