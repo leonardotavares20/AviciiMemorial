@@ -23,7 +23,7 @@ const mouseEnterHandler = (event: Event) => {
     on:mouseLeaveAnchor={mouseLeaveHandler}
   >
     <Anchor href={""} ancorMenu>Join The Community</Anchor>
-    <HoverCard mouseEnterOverlay={true} />
+    <HoverCard mouseEnterOverlay={mouseEnter} />
   </HoverOverlay>
   <Anchor href={"/"} ancorMenu>Shop</Anchor>
 </Menu>
