@@ -22,6 +22,7 @@
   {placeholder}
   {pattern}
   class="input"
+  autocomplete="off"
   class:input--large={large}
   class:input--borderWhite={borderWhite}
   on:input={handleChangeInput}
@@ -38,6 +39,7 @@
     color: white
     transition: 0.2s
     z-index: 10
+    letter-spacing: 1px
   
   .input::placeholder
     font-size: 1rem

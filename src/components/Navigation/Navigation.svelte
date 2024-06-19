@@ -15,7 +15,6 @@
         position: sticky
         top: 0
         height: 150px
-        margin-bottom: 2.5rem
 
   .navigation
         width: 93%
