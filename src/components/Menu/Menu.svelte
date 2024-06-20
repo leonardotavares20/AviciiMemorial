@@ -20,4 +20,6 @@
         height: 100%
         align-items: center
         width: 100%
+        gap: 1.2rem
+        list-style-type: none
 </style>
