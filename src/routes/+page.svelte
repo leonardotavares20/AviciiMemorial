@@ -1,16 +1,14 @@
 <script>
-	
+  import Banner from "../components/Banner/Banner.svelte";
 </script>
 
 <svelte:head>
-	<title>Avicii</title>
-	<meta name="description" content="Avicii" />
+  <title>Avicii</title>
+  <meta name="description" content="Avicii" />
 </svelte:head>
 
-<section>
-</section>
-
+<Banner />
 
 <style lang="sass">
-	
+
 </style>
