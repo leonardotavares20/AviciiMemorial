@@ -7,9 +7,7 @@
   <meta name="description" content="Avicii" />
 </svelte:head>
 
-<section>
-  <Banner />
-</section>
+<Banner />
 
 <style lang="sass">
 
