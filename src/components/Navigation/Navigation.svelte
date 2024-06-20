@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   $: scrollViewPort = false;
 
   if (typeof window !== "undefined") {
@@ -6,6 +7,12 @@
       scrollViewPort = window.scrollY > 30;
     });
   }
+
+  onMount(() => {
+    if (typeof window !== "undefined" && window.scrollY > 30) {
+      scrollViewPort = true;
+    }
+  });
 </script>
 
 <header class:header--scrollViewHeight={scrollViewPort} class="header">
@@ -25,11 +32,10 @@
       position: fixed
       top: 0
       height: 150px
-      background: transparent
       transition: 0.5s
 
   .header-suport
-    height: 150px
+    height: 5px
 
   .header--scrollViewHeight
       height: 60px
