@@ -5,30 +5,18 @@
   onMount(() => {
     const timeline = gsap.timeline();
 
-    timeline.fromTo(
+    timeline.to(
       "#memory-container__banner",
-      { opacity: 0 },
       { opacity: 1, duration: 1.5 },
       0.5
     );
-    timeline.fromTo(
+    timeline.to(
       "#memory-container__memory-board",
-      { opacity: 0 },
       { opacity: 1, duration: 2 },
       1
     );
-    timeline.fromTo(
-      "#memory-container__details",
-      { opacity: 0 },
-      { opacity: 1, duration: 2 },
-      1.5
-    );
-    timeline.fromTo(
-      "#memory-container__name",
-      { opacity: 0 },
-      { opacity: 1, duration: 2 },
-      2
-    );
+    timeline.to("#memory-container__details", { opacity: 1, duration: 2 }, 1.5);
+    timeline.to("#memory-container__name", { opacity: 1, duration: 2 }, 2);
   });
 </script>
 
@@ -70,6 +58,7 @@
       overflow: hidden
       height: 110vh
 
+
     .memory-container__overlay
       position: absolute
       z-index: 10
@@ -82,7 +71,11 @@
     .memory-container__banner
       width: 100%
       object-fit: cover
+      opacity: 0
       transform: translateY(-45px)
+
+    .memory-container__memory-board
+      opacity: 0
 
     .memory-container__titles
       display: flex
@@ -98,6 +91,7 @@
 
     .memory-container__details
       display: grid
+      opacity: 0
       row-gap: 8px
 
     .memory-container__text
@@ -110,4 +104,5 @@
 
     .memory-container__name
       padding-top: 50px
+      opacity: 0
 </style>
