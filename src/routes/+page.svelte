@@ -1,5 +1,6 @@
 <script>
   import Banner from "../components/Banner/Banner.svelte";
+  import Remebering from "./home/Remebering.svelte";
 </script>
 
 <svelte:head>
@@ -8,6 +9,7 @@
 </svelte:head>
 
 <Banner />
+<Remebering />
 
 <style lang="sass">
 
