@@ -1,8 +1,27 @@
 <script lang="ts">
+  import ScrollTrigger from "gsap/dist/ScrollTrigger";
+  import { onMount } from "svelte";
+  import gsap from "gsap";
+
+  onMount(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+      trigger: "remembering-content",
+      once: true,
+      onEnter: () => {
+        gsap.to("#remembering-content", {
+          opacity: 1,
+          duration: 2,
+          delay: 0.7,
+        });
+      },
+    });
+  });
 </script>
 
 <section class="remembering-container">
-  <div class="remembering-content">
+  <div id="remembering-content" class="remembering-content">
     <img
       class="remembering-content__title"
       src="/titles/titleRemembering.svg"
@@ -35,6 +54,7 @@
     .remembering-content
         width: 60%
         display: grid
+        opacity: 0
         gap: 20px
         justify-items: center
         text-align: center
