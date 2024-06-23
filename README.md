@@ -5,12 +5,12 @@ Miss you Tim❤️
 
 ## Clone
 
-Git
+Git <br>
 ``
 git clone https://github.com/leonardotavares20/AviciiSvelte.git
 ``
 
-GH(GitHub CLI)
+GH(GitHub CLI) <br>
 ``
 gh repo clone leonardotavares20/AviciiSvelte
 ``
