@@ -1,20 +1,46 @@
 <script lang="ts">
+  import gsap from "gsap";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    const timeline = gsap.timeline();
+
+    timeline.to(
+      "#memory-container__banner",
+      { opacity: 1, duration: 1.5 },
+      0.5
+    );
+    timeline.to(
+      "#memory-container__memory-board",
+      { opacity: 1, duration: 2 },
+      1
+    );
+    timeline.to("#memory-container__details", { opacity: 1, duration: 2 }, 1.5);
+    timeline.to("#memory-container__name", { opacity: 1, duration: 2 }, 2);
+  });
 </script>
 
 <section class="memory-container">
-  <img class="memory-container__banner" src="/banner/studio-tim.webp" alt="" />
+  <img
+    id="memory-container__banner"
+    class="memory-container__banner"
+    src="/banner/studio-tim.webp"
+    alt=""
+  />
   <div class="memory-container__titles">
     <div class="memory-container__titles-content">
       <img
+        id="memory-container__memory-board"
         class="memory-container__memory-board"
         src="/titles/titleMemoryBoard.svg"
         alt="The Avicii Memory"
       />
-      <div class="memory-container__details">
+      <div id="memory-container__details" class="memory-container__details">
         <p class="memory-container__text">IN LOVING MEMORY</p>
         <p class="memory-container__dates">1989.09.08 – 2018.04.20</p>
       </div>
       <img
+        id="memory-container__name"
         class="memory-container__name"
         src="/name/nameAvicii.svg"
         alt="Avicii"
@@ -32,6 +58,7 @@
       overflow: hidden
       height: 110vh
 
+
     .memory-container__overlay
       position: absolute
       z-index: 10
@@ -44,7 +71,11 @@
     .memory-container__banner
       width: 100%
       object-fit: cover
+      opacity: 0
       transform: translateY(-45px)
+
+    .memory-container__memory-board
+      opacity: 0
 
     .memory-container__titles
       display: flex
@@ -60,6 +91,7 @@
 
     .memory-container__details
       display: grid
+      opacity: 0
       row-gap: 8px
 
     .memory-container__text
@@ -72,4 +104,5 @@
 
     .memory-container__name
       padding-top: 50px
+      opacity: 0
 </style>
