@@ -7,13 +7,13 @@
     gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.create({
-      trigger: "remembering-content",
+      trigger: "#remembering-content",
       once: true,
       onEnter: () => {
         gsap.to("#remembering-content", {
           opacity: 1,
-          duration: 2,
-          delay: 0.7,
+          start: "end end",
+          duration: 2.5,
         });
       },
     });
@@ -25,7 +25,7 @@
     <img
       class="remembering-content__title"
       src="/titles/titleRemembering.svg"
-      alt=""
+      alt="Remembering Tim Bergling"
     />
     <p class="remembering-content__text">
       Tim created music that brought people together with timeless memories from
