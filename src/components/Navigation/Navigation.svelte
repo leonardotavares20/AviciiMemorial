@@ -23,10 +23,10 @@
 <div class="header-suport"></div>
 
 <style lang="sass">
-    .header
+  .header
       width: 100%
       text-align: center
-      z-index: 10
+      z-index: 20
       display: flex
       justify-content: center
       position: fixed
@@ -35,7 +35,7 @@
       transition: 0.5s
 
   .header-suport
-    height: 5px
+      height: 5px
 
   .header--scrollViewHeight
       height: 60px
