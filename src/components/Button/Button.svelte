@@ -2,12 +2,10 @@
   export let type;
   export let disabled = false;
   export let large = false;
-  export let onClick = () => {};
 </script>
 
 <button
-  on:click={onClick}
-  class:large-button={large}
+  class:button--large={large}
   class="button"
   {type}
   {disabled}
@@ -32,7 +30,7 @@
         z-index: 10
         transition: 0.2s
 
-    .large-button
+    .button--large
         width: 417px
         height: 72px
         font-size: 1.1rem

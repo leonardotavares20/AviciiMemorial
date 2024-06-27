@@ -3,11 +3,11 @@
 
   const dispatch = createEventDispatcher();
 
-  const mouseEnterAncorHandle = (event: Event) => {
+  const mouseEnterAncor = (event: Event) => {
     dispatch("mouseEnterAnchor");
   };
 
-  const mouseLeaveAncorHandle = (event: Event) => {
+  const mouseLeaveAncor = (event: Event) => {
     dispatch("mouseLeaveAnchor");
   };
 </script>
@@ -15,8 +15,8 @@
 <div
   aria-hidden="true"
   class="overlay"
-  on:mouseenter={mouseEnterAncorHandle}
-  on:mouseleave={mouseLeaveAncorHandle}
+  on:mouseenter={mouseEnterAncor}
+  on:mouseleave={mouseLeaveAncor}
 >
   <slot />
 </div>

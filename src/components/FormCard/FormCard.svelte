@@ -14,7 +14,7 @@
     detail: string;
   }
 
-  const getOptionHandler = (event: EventOption) => {
+  const getOption = (event: EventOption) => {
     console.log(event.detail);
   };
 
@@ -28,7 +28,7 @@
 </script>
 
 <form action="" class="formCard">
-  <Select name="country" on:changeOption={getOptionHandler} {countries} />
+  <Select name="country" on:changeOption={getOption} {countries} />
   <div class="formCard__column">
     <Input type="email" name="email" placeholder="E-Mail" />
     <Button type="submit">Send</Button>

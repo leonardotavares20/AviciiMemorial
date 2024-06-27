@@ -9,7 +9,7 @@
   export let large = false;
   export let borderWhite = false;
 
-  function handleChangeInput(event: Event) {
+  function changeInput(event: Event) {
     console.log(event);
   }
 </script>
@@ -25,7 +25,7 @@
   autocomplete="off"
   class:input--large={large}
   class:input--borderWhite={borderWhite}
-  on:input={handleChangeInput}
+  on:input={changeInput}
 />
 
 <style lang="sass">

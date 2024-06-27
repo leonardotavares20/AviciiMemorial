@@ -9,7 +9,7 @@
   const dispatch = createEventDispatcher();
   let componentElement: HTMLElement;
 
-  function selectOptionHandler(name: string, code: string) {
+  function selectOption(name: string, code: string) {
     open = false;
     selectedOption = name;
     selectedCode = code;
@@ -19,34 +19,34 @@
   function toggleDropdown() {
     open = !open;
     if (open) {
-      document.addEventListener("keydown", handleEscapeKey);
+      document.addEventListener("keydown", escapeKey);
     } else {
-      document.removeEventListener("keydown", handleEscapeKey);
+      document.removeEventListener("keydown", escapeKey);
     }
   }
 
-  function handleEscapeKey(event: KeyboardEvent) {
+  function escapeKey(event: KeyboardEvent) {
     if (event.key === "Escape") {
       open = false;
-      document.removeEventListener("keydown", handleEscapeKey);
+      document.removeEventListener("keydown", escapeKey);
     }
   }
 
-  function handleClickOutside(event: MouseEvent) {
+  function clickOutside(event: MouseEvent) {
     if (componentElement && !componentElement.contains(event.target as Node)) {
       open = false;
-      document.removeEventListener("keydown", handleEscapeKey);
+      document.removeEventListener("keydown", escapeKey);
     }
   }
 
   onMount(() => {
     if (typeof document !== "undefined")
-      document.addEventListener("click", handleClickOutside);
+      document.addEventListener("click", clickOutside);
   });
 
   onDestroy(() => {
     if (typeof document !== "undefined")
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", clickOutside);
   });
 </script>
 
@@ -82,7 +82,7 @@
         <li
           class="select__option"
           aria-hidden="true"
-          on:click={() => selectOptionHandler(country.name, country.code)}
+          on:click={() => selectOption(country.name, country.code)}
         >
           {country.name}
         </li>
