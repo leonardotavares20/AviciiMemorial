@@ -25,9 +25,9 @@
         position: relative
         display: flex
         align-items: center
-        gap: 15px
         color: #434343
-        width: 62%
+        gap: 20px
+        width: 70%
 
     .label:hover
       color: #999999
