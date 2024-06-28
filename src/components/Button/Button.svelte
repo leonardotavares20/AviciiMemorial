@@ -1,9 +1,15 @@
 <script lang="ts">
   export let type;
   export let disabled = false;
+  export let large = false;
 </script>
 
-<button class="button" {type} {disabled}>
+<button
+  class:button--large={large}
+  class="button"
+  {type}
+  {disabled}
+>
   <slot />
 </button>
 
@@ -23,4 +29,10 @@
         border-color: white
         z-index: 10
         transition: 0.2s
+
+    .button--large
+        width: 417px
+        height: 72px
+        font-size: 1.1rem
+        border-color: white
 </style>

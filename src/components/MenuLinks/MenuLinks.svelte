@@ -3,15 +3,15 @@
   import Anchor from "../Anchor/Anchor.svelte";
   import Menu from "../Menu/Menu.svelte";
   import HoverOverlay from "../HoverOverlay/HoverOverlay.svelte";
-  
-  let mouseEnter: boolean = false;
 
-const mouseEnterHandler = (event: Event) => {
-    mouseEnter = true;
+  let mouseIsOver: boolean = false;
+
+  const mouseEnter = (event: Event) => {
+    mouseIsOver = true;
   };
 
-  const mouseLeaveHandler = (event: Event) => {
-    mouseEnter = false;
+  const mouseLeave = (event: Event) => {
+    mouseIsOver = false;
   };
 </script>
 
@@ -19,11 +19,11 @@ const mouseEnterHandler = (event: Event) => {
   <Anchor href={"/"} ancorMenu>Tim Bergling Foundation</Anchor>
   <Anchor href={"/"} ancorMenu>Avicii Experience</Anchor>
   <HoverOverlay
-    on:mouseEnterAnchor={mouseEnterHandler}
-    on:mouseLeaveAnchor={mouseLeaveHandler}
+    on:mouseEnterAnchor={mouseEnter}
+    on:mouseLeaveAnchor={mouseLeave}
   >
     <Anchor href={""} ancorMenu>Join The Community</Anchor>
-    <HoverCard mouseEnterOverlay={mouseEnter} />
+    <HoverCard mouseEnterOverlay={mouseIsOver} />
   </HoverOverlay>
   <Anchor href={"/"} ancorMenu>Shop</Anchor>
 </Menu>
