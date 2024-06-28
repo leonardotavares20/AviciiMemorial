@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 
 export function createShareSmooth(onComplete: () => void) {
   return ScrollTrigger.create({
@@ -44,8 +45,15 @@ export function createTimelineForm() {
     .to(
       "#share-form__form",
       {
-        height: 600,
+        height: 800,
         duration: 0.3,
+        onStart: () => {
+          gsap.to(window, {
+            duration: 0.5,
+            ease: "sine",
+            scrollTo: "#share-form",
+          });
+        },
       },
       0.3
     );
