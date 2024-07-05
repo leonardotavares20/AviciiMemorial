@@ -3,7 +3,8 @@
   import { onMount } from "svelte";
   import ScrollTrigger from "gsap/dist/ScrollTrigger";
   import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
-  import { createShareSmooth, createTimelineForm } from "./timeline";
+  import { createTimelineForm } from "../../assets/animations/timeline/formTimeline";
+  import { createSmoothScrollhare } from "../../assets/animations/scroll/scrollShare";
 
   let image: HTMLImageElement;
   let inputFile: HTMLInputElement;
@@ -36,7 +37,7 @@
   }
 
   function smoothScroll(): void {
-    createShareSmooth(() => {
+    createSmoothScrollhare(() => {
       animationBackgroundComplete = true;
     });
   }
@@ -71,6 +72,10 @@
     smoothScroll();
 
     timeline = createTimelineForm();
+
+    // return () => {
+    //   timeline.kill();
+    // };
   });
 </script>
 
@@ -185,7 +190,6 @@
     border: 2px solid #434343
     letter-spacing: 2px
     font-weight: 600
-    transform: translateY(30px)
     cursor: pointer
     transition: 0.2s
     overflow: hidden
@@ -200,13 +204,11 @@
   .share-form__button-close
     width: 130px
     opacity: 1
-    transform: translateY(0px)
     margin-bottom: 50px
 
   .share-form__button-send
     opacity: 1
     width: 110px
-    transform: translateY(0px)
     height: 50px
     font-size: 0.9rem
 

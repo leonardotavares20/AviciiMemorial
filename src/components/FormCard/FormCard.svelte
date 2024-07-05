@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
-  import { countries } from "../../assets/coutry";
+  import { countries } from "../../assets/country/country";
 
   import Select from "../Select/Select.svelte";
   import Input from "../Input/Input.svelte";

@@ -1,22 +1,13 @@
 <script lang="ts">
-  import gsap from "gsap";
   import { onMount } from "svelte";
+  import { createBannerTimeline } from "../../assets/animations/timeline/bannerTimeline";
 
   onMount(() => {
-    const timeline = gsap.timeline();
+    const timeline = createBannerTimeline();
 
-    timeline.to(
-      "#memory-container__banner",
-      { opacity: 1, duration: 1.5 },
-      0.5
-    );
-    timeline.to(
-      "#memory-container__memory-board",
-      { opacity: 1, duration: 2 },
-      1
-    );
-    timeline.to("#memory-container__details", { opacity: 1, duration: 2 }, 1.5);
-    timeline.to("#memory-container__name", { opacity: 1, duration: 2 }, 2);
+    return () => {
+      timeline.kill();
+    };
   });
 </script>
 
@@ -25,7 +16,7 @@
     id="memory-container__banner"
     class="memory-container__banner"
     src="/banner/studio-tim.webp"
-    alt=""
+    alt="Tim Bergling"
   />
   <div class="memory-container__titles">
     <div class="memory-container__titles-content">
