@@ -2,21 +2,16 @@
   import ScrollTrigger from "gsap/dist/ScrollTrigger";
   import { onMount } from "svelte";
   import gsap from "gsap";
+  import { createSmoothScrollRemembering } from "../../assets/animations/scroll/scrollRemembering";
+
+  function smoothScroll(): void {
+    createSmoothScrollRemembering();
+  }
 
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    ScrollTrigger.create({
-      trigger: "#remembering-content",
-      once: true,
-      onEnter: () => {
-        gsap.to("#remembering-content", {
-          opacity: 1,
-          start: "end end",
-          duration: 2.5,
-        });
-      },
-    });
+    smoothScroll();
   });
 </script>
 
@@ -65,5 +60,4 @@
 
     .remembering-content__text
         line-height: 27px
-
 </style>
