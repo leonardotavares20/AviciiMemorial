@@ -5,30 +5,46 @@
 This is a personal project, which I am using to learn and train what I know in Svelte. <br>
 Miss you Tim❤️
 
-## Clone
+## Dependencies
 
-Git <br>
+- GSAP - Animation Lib
+- Axios - HTTP Requests
+
+## DevDependencies
+- Svelte - Framework
+- SvelteKit - Svelte Framework
+- Vite - Build
+- Sass - Preprocessor CSS
+- Typescript - Superset of JS
+
+## Clone the Repo
+
+- Using Git: 
 ``
 git clone https://github.com/leonardotavares20/AviciiSvelte.git
 ``
 
-GH(GitHub CLI) <br>
+- Using GitHub CLI:
 ``
 gh repo clone leonardotavares20/AviciiSvelte
 ``
 
-## Install
+## Install Dependencies
 ``
 pnpm install
 ``
 
-## Run
+## Run the Dev Server
 ``
 pnpm dev
 ``
 
-## Open
+## Open the App
 
 ``
 http://localhost:5173
 ``
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
