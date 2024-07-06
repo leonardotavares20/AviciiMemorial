@@ -13,7 +13,6 @@
 <style lang="sass">
     .memory
         text-align: center
-        display: grid
 
     .memory__from
         font-size: 14px
