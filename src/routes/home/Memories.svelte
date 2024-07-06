@@ -1,28 +1,26 @@
 <script lang="ts">
   import Links from "./Links.svelte";
+  import { memories } from "../../assets/memories/memories";
+  import Grid from "../../components/Grid/Grid.svelte";
+  import MemoryItem from "../../components/MemoryItem/MemoryItem.svelte";
+  import SubTitle from "../../components/SubTitle/SubTitle.svelte";
 </script>
 
 <section class="memories-section">
   <Links />
-  <h2 class="memories-section__title">
+  <SubTitle md>
     Take a few minutes and read the avicii stories and memories people have
     shared from all over the world.
-  </h2>
+  </SubTitle>
+  <Grid>
+    {#each memories as { date, from, message }, index}
+      <MemoryItem {date} {from} {message} />
+    {/each}
+  </Grid>
 </section>
 
 <style lang="sass">
     .memories-section
-        display: grid
-        justify-content: center
-
-    .memories-section__title
-        font-size: 1.25rem
-        letter-spacing: 5px
-        font-weight: 500
-        color: white
-        margin-top: 100px
-        text-transform: uppercase
-        text-align: center
-        line-height: 28px
-        max-width: 530px
+      margin: auto
+      color: white
 </style>

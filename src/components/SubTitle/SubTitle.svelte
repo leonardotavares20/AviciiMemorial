@@ -1,0 +1,42 @@
+<script>
+  export let sm = false;
+  export let md = false;
+  export let lg = false;
+</script>
+
+<h2
+  class="subtitle"
+  class:subtitle--large={lg}
+  class:subtitle--medium={md}
+  class:subtitle--small={sm}
+>
+  <slot />
+</h2>
+
+<style lang="sass">
+    .subtitle
+      font-size: 1.25rem
+      letter-spacing: 5px
+      margin: auto
+      font-weight: 500
+      color: white
+      margin-top: 100px
+      margin-bottom: 100px
+      text-transform: uppercase
+      text-align: center
+      line-height: 28px
+
+    .subtitle--large
+        max-width: 800px
+        font-size: 1.5rem
+
+
+    .subtitle--medium
+        max-width: 530px
+        font-size: 1.25rem
+
+
+    .subtitle--small
+        max-width: 300px
+        font-size: 1rem
+</style>
