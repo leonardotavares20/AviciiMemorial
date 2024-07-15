@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { createEventDispatcher } from "svelte";
   import { countries } from "../../assets/country/country";
 
   import Select from "../Select/Select.svelte";
@@ -8,21 +7,21 @@
   import Button from "../Button/Button.svelte";
   import Label from "../Label/Label.svelte";
 
-  let hoverLabel = false;
+  let hoverLabel: boolean = false;
 
   interface EventOption {
     detail: string;
   }
 
-  const getOption = (event: EventOption) => {
+  const getOption = (event: EventOption): void => {
     console.log(event.detail);
   };
 
-  const mouseEnterLabel = () => {
+  const mouseEnterLabel = (): void => {
     hoverLabel = true;
   };
 
-  const mouseLeaveLabel = () => {
+  const mouseLeaveLabel = (): void => {
     hoverLabel = false;
   };
 </script>

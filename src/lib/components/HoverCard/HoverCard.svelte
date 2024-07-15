@@ -1,7 +1,5 @@
 <script lang="ts">
-  import FormHeader from "../FormHeader/FormHeader.svelte";
-
-  export let mouseEnterOverlay = true;
+  export let mouseEnterOverlay: boolean = true;
 </script>
 
 <div class="overlay" class:overlay--pointerEvent={mouseEnterOverlay}>

@@ -4,19 +4,19 @@
   let selectedOption: string;
   let selectedCode: string = "";
   let open: boolean = false;
-  export let name = "";
+  export let name: string = "";
 
   const dispatch = createEventDispatcher();
   let componentElement: HTMLElement;
 
-  function selectOption(name: string, code: string) {
+  function selectOption(name: string, code: string): void {
     open = false;
     selectedOption = name;
     selectedCode = code;
     dispatch("changeOption", { name, code });
   }
 
-  function toggleDropdown() {
+  function toggleDropdown(): void {
     open = !open;
     if (open) {
       document.addEventListener("keydown", escapeKey);
@@ -25,26 +25,26 @@
     }
   }
 
-  function escapeKey(event: KeyboardEvent) {
+  function escapeKey(event: KeyboardEvent): void {
     if (event.key === "Escape") {
       open = false;
       document.removeEventListener("keydown", escapeKey);
     }
   }
 
-  function clickOutside(event: MouseEvent) {
+  function clickOutside(event: MouseEvent): void {
     if (componentElement && !componentElement.contains(event.target as Node)) {
       open = false;
       document.removeEventListener("keydown", escapeKey);
     }
   }
 
-  onMount(() => {
+  onMount((): void => {
     if (typeof document !== "undefined")
       document.addEventListener("click", clickOutside);
   });
 
-  onDestroy(() => {
+  onDestroy((): void => {
     if (typeof document !== "undefined")
       document.removeEventListener("click", clickOutside);
   });

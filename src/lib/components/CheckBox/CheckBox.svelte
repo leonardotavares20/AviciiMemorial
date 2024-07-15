@@ -1,6 +1,6 @@
 <script lang="ts">
-  export let name = "";
-  export let hoverLabel = false;
+  export let name: string = "";
+  export let hoverLabel: boolean = false;
 </script>
 
 <input type="checkbox" class="checkbox" {name} id={name} />

@@ -3,11 +3,11 @@
 
   const dispatch = createEventDispatcher();
 
-  const mouseEnterAncor = (event: Event) => {
+  const mouseEnterAncor = (event: Event): void => {
     dispatch("mouseEnterAnchor");
   };
 
-  const mouseLeaveAncor = (event: Event) => {
+  const mouseLeaveAncor = (event: Event): void => {
     dispatch("mouseLeaveAnchor");
   };
 </script>

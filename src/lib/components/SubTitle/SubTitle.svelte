@@ -1,7 +1,7 @@
-<script>
-  export let sm = false;
-  export let md = false;
-  export let lg = false;
+<script lang="ts">
+  export let sm: boolean = false;
+  export let md: boolean = false;
+  export let lg: boolean = false;
 </script>
 
 <h2

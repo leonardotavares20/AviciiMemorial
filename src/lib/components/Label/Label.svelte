@@ -1,10 +1,10 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
-  export let name = "";
-  export let formHeader = false;
-  export let shareName = false;
-  export let shareStory = false;
-  export let shareFile = false;
+  export let name: string = "";
+  export let formHeader: boolean = false;
+  export let shareName: boolean = false;
+  export let shareStory: boolean = false;
+  export let shareFile: boolean = false;
 
   const dispatcher = createEventDispatcher();
 

@@ -1,6 +1,6 @@
-<script>
-  export let menuLinks = false;
-  export let menuSocials = false;
+<script lang="ts">
+  export let menuLinks: boolean = false;
+  export let menuSocials: boolean = false;
 </script>
 
 <menu class:menuLinks class:menuSocials><slot /></menu>

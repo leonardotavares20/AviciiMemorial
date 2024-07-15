@@ -3,12 +3,12 @@
   $: scrollViewPort = false;
 
   if (typeof window !== "undefined") {
-    window.addEventListener("scroll", (event) => {
+    window.addEventListener("scroll", (event): void => {
       scrollViewPort = window.scrollY > 30;
     });
   }
 
-  onMount(() => {
+  onMount((): void => {
     if (typeof window !== "undefined" && window.scrollY > 30) {
       scrollViewPort = true;
     }

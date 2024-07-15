@@ -2,12 +2,12 @@
   import { createEventDispatcher } from "svelte";
 
   export let type;
-  export let disabled = false;
-  export let id = "";
-  export let closeForm = false;
-  export let shareForm = false;
-  export let cancelFile = false;
-  export let submitForm = false;
+  export let disabled: boolean = false;
+  export let id: string = "";
+  export let closeForm: boolean = false;
+  export let shareForm: boolean = false;
+  export let cancelFile: boolean = false;
+  export let submitForm: boolean = false;
 
   let dispatcher = createEventDispatcher();
 
@@ -51,6 +51,8 @@
     .button--share-form
         width: 417px
         height: 72px
+        opacity: 0
+        transform: translateY(30px)
         font-size: 1.1rem
         margin-bottom: 10px
         border: 2px solid white

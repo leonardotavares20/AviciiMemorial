@@ -1,7 +1,7 @@
 <script lang="ts">
-  export let from = "";
-  export let date = "";
-  export let message = "";
+  export let from: string = "";
+  export let date: string = "";
+  export let message: string = "";
 </script>
 
 <li class="memory">

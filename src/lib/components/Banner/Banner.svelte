@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { createBannerTimeline } from "$lib/assets/animations/timeline/bannerTimeline";
 
-  onMount(() => {
+  onMount((): (() => void) | void => {
     const timeline = createBannerTimeline();
 
     return () => {

@@ -1,6 +1,6 @@
 <script lang="ts">
-  export let href;
-  export let ancorMenu = false;
+  export let href: string;
+  export let ancorMenu: boolean = false;
 
   $: ancorMenu;
 </script>

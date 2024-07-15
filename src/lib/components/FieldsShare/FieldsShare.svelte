@@ -24,7 +24,7 @@
     setOpacityBackground(1);
   }
 
-  function handlePreviewImage(event: Event) {
+  function handlePreviewImage(event: Event): void {
     showPreviewImage = setPreview(event, image);
   }
 

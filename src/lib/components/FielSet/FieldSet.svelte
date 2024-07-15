@@ -1,5 +1,5 @@
-<script>
-  export let shareForm = false;
+<script lang="ts">
+  export let shareForm: boolean = false;
 </script>
 
 <fieldset class:fieldset-share-form={shareForm}>
