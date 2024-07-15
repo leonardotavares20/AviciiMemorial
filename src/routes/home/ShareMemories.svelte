@@ -6,7 +6,7 @@
   import Button from "$lib/components/Button/Button.svelte";
   import FieldsShare from "$lib/components/FieldsShare/FieldsShare.svelte";
   import { setOpacityBackground } from "$lib/assets/animations/form/shareForm";
-  import { createSmoothScrollhare } from "$lib/assets/animations/scroll/scrollShare";
+  import { createSmoothScrollShare } from "$lib/assets/animations/scroll/scrollShare";
   import { createTimelineForm } from "$lib/assets/animations/timeline/formTimeline";
 
   let timeline: gsap.core.Timeline;
@@ -19,7 +19,7 @@
   }
 
   function smoothScroll(): void {
-    createSmoothScrollhare(() => {
+    createSmoothScrollShare(() => {
       animationBackgroundComplete = true;
     });
   }
