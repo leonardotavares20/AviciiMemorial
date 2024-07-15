@@ -1,4 +1,4 @@
-export function setPreview(event: Event, image: HTMLImageElement) {
+export function setPreview(event: Event, image: HTMLImageElement): boolean {
   const input = event.target as HTMLInputElement;
   if (input.files && input.files[0]) {
     const file = input.files[0];
@@ -20,7 +20,7 @@ export function setPreview(event: Event, image: HTMLImageElement) {
 export function resetFileInput(
   input: HTMLInputElement,
   image: HTMLImageElement
-) {
+): boolean {
   input.value = "";
   image.setAttribute("src", "");
 

@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-export function createSmoothScrollShare(onComplete: () => void) {
+export function createSmoothScrollShare(onComplete: () => void): ScrollTrigger {
   return ScrollTrigger.create({
     trigger: "#share-form__background",
     once: true,

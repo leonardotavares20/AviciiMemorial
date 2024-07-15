@@ -1,7 +1,7 @@
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
 
-export function createSmoothScrollRemembering() {
+export function createSmoothScrollRemembering(): ScrollTrigger {
   return ScrollTrigger.create({
     trigger: "#remembering-content",
     once: true,

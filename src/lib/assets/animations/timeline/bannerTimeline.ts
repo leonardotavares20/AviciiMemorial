@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-export function createBannerTimeline() {
+export function createBannerTimeline(): gsap.core.Timeline {
   return gsap
     .timeline()
     .to("#memory-container__banner", { opacity: 1, duration: 1.5 }, 0.5)

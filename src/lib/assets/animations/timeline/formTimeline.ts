@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-export function createTimelineForm() {
+export function createTimelineForm(): gsap.core.Timeline {
   return gsap
     .timeline({ paused: true })
     .to("#share-form__button", {
