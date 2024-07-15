@@ -1,5 +1,5 @@
 <script lang="ts">
-  import FormCard from "../FormCard/FormCard.svelte";
+  import FormHeader from "../FormHeader/FormHeader.svelte";
 
   export let mouseEnterOverlay = true;
 </script>
@@ -12,7 +12,7 @@
       alt=""
       aria-hidden="true"
     />
-    <FormCard />
+    <slot></slot>
   </div>
 </div>
 

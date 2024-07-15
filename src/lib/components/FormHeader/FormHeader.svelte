@@ -38,6 +38,7 @@
       name="policy"
       on:mouseEnterLabel={mouseEnterLabel}
       on:mouseLeaveLabel={mouseLeaveLabel}
+      formHeader
     >
       <CheckBox {hoverLabel} name="policy" />
       <p>

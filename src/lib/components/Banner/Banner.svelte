@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { createBannerTimeline } from "../../assets/animations/timeline/bannerTimeline";
+  import { createBannerTimeline } from "$lib/assets/animations/timeline/bannerTimeline";
 
   onMount(() => {
     const timeline = createBannerTimeline();

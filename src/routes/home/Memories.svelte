@@ -1,9 +1,9 @@
 <script lang="ts">
   import Links from "./Links.svelte";
-  import { memories } from "../../assets/memories/memories";
-  import Grid from "../../components/Grid/Grid.svelte";
-  import MemoryItem from "../../components/MemoryItem/MemoryItem.svelte";
-  import SubTitle from "../../components/SubTitle/SubTitle.svelte";
+  import { memories } from "$lib/assets/memories/memories";
+  import Grid from "$lib/components/Grid/Grid.svelte";
+  import MemoryItem from "$lib/components/MemoryItem/MemoryItem.svelte";
+  import SubTitle from "$lib/components/SubTitle/SubTitle.svelte";
 </script>
 
 <section class="memories-section">

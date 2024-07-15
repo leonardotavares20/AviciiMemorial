@@ -11,6 +11,7 @@
   "devDependencies": {
     "@fontsource/fira-mono": "^4.5.10",
     "@neoconfetti/svelte": "^1.0.0",
+    "@rollup/plugin-alias": "^5.1.0",
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
@@ -23,6 +24,9 @@
   },
   "type": "module",
   "dependencies": {
-    "gsap": "^3.12.5"
+    "axios": "^1.7.2",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.6",
+    "sveltekit-autoimport": "^1.8.0"
   }
 }
