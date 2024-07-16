@@ -1,7 +1,14 @@
 <script lang="ts">
+  import { ScrollLinks } from "$lib/assets/animations/scroll/ScrollLinks";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    const scroll = new ScrollLinks();
+    scroll.getScroll();
+  });
 </script>
 
-<div class="links-container">
+<div id="links-container" class="links-container">
   <ul class="links-container__menu-links">
     <a class="links-container__link" href="#comments">
       <li>Comments</li>
@@ -16,6 +23,7 @@
 <style lang="sass">
     .links-container
         color: white
+        opacity: 0
         margin-top: 30px
         display: flex
         justify-content: center
