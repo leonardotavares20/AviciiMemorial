@@ -1,12 +1,19 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import Links from "./Links.svelte";
-  import { memories } from "$lib/assets/memories/memories";
   import Grid from "$lib/components/Grid/Grid.svelte";
-  import MemoryItem from "$lib/components/MemoryItem/MemoryItem.svelte";
+  import { memories } from "$lib/assets/memories/memories";
   import SubTitle from "$lib/components/SubTitle/SubTitle.svelte";
+  import MemoryItem from "$lib/components/MemoryItem/MemoryItem.svelte";
+  import { ScrollMemories } from "$lib/assets/animations/scroll/ScrollMemories";
+
+  onMount(() => {
+    const scroll = new ScrollMemories();
+    scroll.getScroll();
+  });
 </script>
 
-<section class="memories-section">
+<section id="memories-section" class="memories-section">
   <Links />
   <SubTitle md>
     Take a few minutes and read the avicii stories and memories people have

@@ -1,20 +1,26 @@
 import gsap from "gsap";
 import { BaseScroll } from "../bases/BaseScroll";
 
-export class ScrollLinks extends BaseScroll {
+export class ScrollMemories extends BaseScroll {
   constructor(options: ScrollTrigger.StaticVars = {}) {
     super(options);
   }
 
   protected setupScroll(): void {
     this.options = {
-      trigger: "#links-container",
+      trigger: "#grid",
       once: true,
       onEnter: () => {
-        gsap.to("#links-container", {
+        gsap.to("#subtitle", {
           opacity: 1,
+          start: "top top",
+          duration: 2.5,
+        });
+        gsap.to("#grid", {
+          opacity: 1,
+          delay: 0.5,
           start: "end end",
-          duration: 3,
+          duration: 2.5,
         });
       },
     };

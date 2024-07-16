@@ -5,6 +5,7 @@
 </script>
 
 <h2
+  id="subtitle"
   class="subtitle"
   class:subtitle--large={lg}
   class:subtitle--medium={md}
@@ -20,6 +21,7 @@
       margin: auto
       font-weight: 500
       color: white
+      opacity: 0
       margin-top: 100px
       margin-bottom: 100px
       text-transform: uppercase
