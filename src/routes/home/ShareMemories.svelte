@@ -18,10 +18,6 @@
     setOpacityBackground(0);
   }
 
-  function onSubmit() {
-    throw Error("Holaaaaaaaaaaaaaaaa :D");
-  }
-
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
@@ -57,7 +53,9 @@
         Share your memories of Avicii
       </Button>
       <form
-        on:submit|preventDefault={onSubmit}
+        on:submit|preventDefault={() => {
+          throw Error("Holaaaaaaaaaaaaaaaa :D");
+        }}
         id="share-form__form"
         class="share-form__form"
       >
