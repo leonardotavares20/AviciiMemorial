@@ -2,16 +2,14 @@
   import ScrollTrigger from "gsap/dist/ScrollTrigger";
   import { onMount } from "svelte";
   import gsap from "gsap";
-  import { createSmoothScrollRemembering } from "$lib/assets/animations/scroll/scrollRemembering";
-
-  function smoothScroll(): void {
-    createSmoothScrollRemembering();
-  }
+  import { ScrollRemembering } from "$lib/assets/animations/scroll/ScrollRemembering";
 
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    smoothScroll();
+    const scroll = new ScrollRemembering();
+
+    scroll.getScroll();
   });
 </script>
 

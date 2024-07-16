@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { BaseTimeline } from "../../bases/BaseTimeline";
+import { BaseTimeline } from "../bases/BaseTimeline";
 
 export class BannerTimeline extends BaseTimeline {
   constructor(status: boolean) {

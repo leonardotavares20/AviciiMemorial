@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { BaseTimeline } from "../../bases/BaseTimeline";
+import { BaseTimeline } from "../bases/BaseTimeline";
 
 export class FormTimeline extends BaseTimeline {
   constructor(status: boolean) {

@@ -1,19 +1,19 @@
 <script lang="ts">
   import gsap from "gsap";
-  import { onDestroy, onMount } from "svelte";
+  import { onMount } from "svelte";
   import ScrollTrigger from "gsap/dist/ScrollTrigger";
   import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
   import Button from "$lib/components/Button/Button.svelte";
   import FieldsShare from "$lib/components/FieldsShare/FieldsShare.svelte";
   import { setOpacityBackground } from "$lib/assets/animations/form/shareForm";
-  import { createSmoothScrollShare } from "$lib/assets/animations/scroll/scrollShare";
+  import { ScrollShare } from "$lib/assets/animations/scroll/ScrollShare";
   import { FormTimeline } from "$lib/assets/animations/timeline/FormTimeline";
+  import { scrollFormAnimationCompleted } from "$lib/stores/form-share";
 
   let timeline: gsap.core.Timeline;
-  let animationBackgroundComplete: boolean = false;
 
   function showForm(): void {
-    if (!animationBackgroundComplete) return;
+    if (!$scrollFormAnimationCompleted) return;
     timeline.play();
     setOpacityBackground(0);
   }
@@ -22,9 +22,8 @@
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
 
-    createSmoothScrollShare(() => {
-      animationBackgroundComplete = true;
-    });
+    const scroll = new ScrollShare();
+    scroll.getScroll();
 
     const formTimeline = new FormTimeline(true);
     timeline = formTimeline.getTimeline();
