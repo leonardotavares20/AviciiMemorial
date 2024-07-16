@@ -1,9 +1,12 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { createBannerTimeline } from "$lib/assets/animations/timeline/bannerTimeline";
+  import { BannerTimeline } from "$lib/assets/animations/timeline/BannerTimeline";
 
-  onMount((): (() => void) | void => {
-    const timeline = createBannerTimeline();
+  let timeline: gsap.core.Timeline;
+
+  onMount(() => {
+    const bannerTimeline = new BannerTimeline(false);
+    timeline = bannerTimeline.getTimeline();
 
     return () => {
       timeline.kill();

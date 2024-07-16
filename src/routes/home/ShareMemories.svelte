@@ -1,13 +1,13 @@
 <script lang="ts">
   import gsap from "gsap";
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
   import ScrollTrigger from "gsap/dist/ScrollTrigger";
   import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
   import Button from "$lib/components/Button/Button.svelte";
   import FieldsShare from "$lib/components/FieldsShare/FieldsShare.svelte";
   import { setOpacityBackground } from "$lib/assets/animations/form/shareForm";
   import { createSmoothScrollShare } from "$lib/assets/animations/scroll/scrollShare";
-  import { createTimelineForm } from "$lib/assets/animations/timeline/formTimeline";
+  import { FormTimeline } from "$lib/assets/animations/timeline/FormTimeline";
 
   let timeline: gsap.core.Timeline;
   let animationBackgroundComplete: boolean = false;
@@ -28,13 +28,18 @@
     throw Error("Holaaaaaaaaaaaaaaaa :D");
   }
 
-  onMount((): void => {
+  onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
 
     smoothScroll();
 
-    timeline = createTimelineForm();
+    const formTimeline = new FormTimeline(true);
+    timeline = formTimeline.getTimeline();
+
+    return () => {
+      return timeline.kill();
+    };
   });
 </script>
 
