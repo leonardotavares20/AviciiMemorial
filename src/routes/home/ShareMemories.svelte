@@ -18,12 +18,6 @@
     setOpacityBackground(0);
   }
 
-  function smoothScroll(): void {
-    createSmoothScrollShare(() => {
-      animationBackgroundComplete = true;
-    });
-  }
-
   function onSubmit() {
     throw Error("Holaaaaaaaaaaaaaaaa :D");
   }
@@ -32,7 +26,9 @@
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
 
-    smoothScroll();
+    createSmoothScrollShare(() => {
+      animationBackgroundComplete = true;
+    });
 
     const formTimeline = new FormTimeline(true);
     timeline = formTimeline.getTimeline();
