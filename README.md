@@ -9,6 +9,7 @@ Miss you Tim❤️
 
 - GSAP - Animation Lib
 - Axios - HTTP Requests
+- Lenis - Scroll Lib
 
 ## DevDependencies
 - Svelte - Framework
