@@ -17,15 +17,17 @@
 </li>
 
 <style lang="sass">
+    @import '../../../styles/variables/_color'
+
     .ancor-menu
         position: relative
-        color: white
+        color: $white
         letter-spacing: 1.5px
         text-transform: uppercase
         font-weight: 600
         transition: 0.2s ease
 
     .ancor-menu:hover
-        color: gray
+        color: $light-gray
         transition: 0.2s ease
 </style>

@@ -15,6 +15,9 @@
 </div>
 
 <style lang="sass">
+    @import '../../../styles/variables/_color'
+    @import '../../../styles/variables/_border'
+
     .overlay
       height: 100px
       position: absolute
@@ -26,12 +29,12 @@
 
     .hoverCard
       padding: 1rem
-      color: white
+      color: $white
       width: 22rem
       top: 70%
       margin-top: 2.3rem
-      background-color: black
-      border: 1px solid #434343
+      background-color: $black
+      border: $bd-width-sm solid $gray
       transform: translateX(-100px)
       transition: 0.2s ease
       opacity: 0

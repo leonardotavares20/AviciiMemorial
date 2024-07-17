@@ -29,19 +29,21 @@
 >
 
 <style lang="sass">
+    @import '../../../styles/variables/_color'
+
     .label--form-header
       position: relative
       display: flex
       align-items: center
-      color: #434343
+      color: $gray
       gap: 20px
 
     .label--form-header:hover
-      color: #999999
+      color: $light-gray
 
     .label--share-story
       font-weight: 900
-      color: white
+      color: $white
       letter-spacing: 2px
       text-align: center
       margin-bottom: 10px

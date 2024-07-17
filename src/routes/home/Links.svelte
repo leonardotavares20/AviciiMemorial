@@ -21,8 +21,10 @@
 </div>
 
 <style lang="sass">
+    @import '../../styles/variables/_color'
+
     .links-container
-        color: white
+        color: $white
         opacity: 0
         margin-top: 30px
         display: flex
@@ -36,5 +38,5 @@
         gap: 10px
 
     .links-container__link
-        color: white
+        color: $white
 </style>

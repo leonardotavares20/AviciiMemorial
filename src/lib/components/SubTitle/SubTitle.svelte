@@ -15,12 +15,14 @@
 </h2>
 
 <style lang="sass">
+    @import '../../../styles/variables/_color'
+
     .subtitle
       font-size: 1.25rem
       letter-spacing: 5px
       margin: auto
       font-weight: 500
-      color: white
+      color: $white
       opacity: 0
       margin-top: 100px
       margin-bottom: 100px

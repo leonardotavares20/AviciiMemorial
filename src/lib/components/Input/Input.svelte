@@ -31,24 +31,27 @@
 />
 
 <style lang="sass">
+    @import '../../../styles/variables/_color'
+    @import '../../../styles/variables/_border'
+
   .input
     display: block
     padding: 1.2rem 0rem 1.2rem 1.2rem
     max-width: 332px
     font-size: 1rem
-    border: 1px solid #434343
-    background: #161616
-    color: white
+    border: $bd-width-sm solid #434343
+    background: $dark-gray
+    color: $white
     transition: 0.2s
     z-index: 10
     letter-spacing: 1px
   
   .input:hover
-    border: 1px solid white
+    border: $bd-width-sm solid $white
 
   .input::placeholder
     font-size: 1rem
-    color: white
+    color: $white
     letter-spacing: 1px
     text-transform: uppercase
 
@@ -56,17 +59,17 @@
     width: 408px
     height: 52px
     max-width: 410px
-    background-color: white
+    background-color: $white
     height: 52px
     padding: 0px 20px
 
   .input--white::placeholder
-    color: gray
+    color: $light-gray
     font-size: 1rem
     text-transform: capitalize
 
   .input--borderWhite
-    border: 1px solid #434343
+    border: $bd-width-sm solid $white
 
   .input-file
     display: block

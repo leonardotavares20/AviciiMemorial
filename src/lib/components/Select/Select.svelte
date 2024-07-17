@@ -92,6 +92,9 @@
 </div>
 
 <style lang="sass">
+    @import '../../../styles/variables/_color'
+    @import '../../../styles/variables/_border'
+
   .select
     position: relative
     text-transform: uppercase
@@ -101,12 +104,12 @@
 
   .select__field
     display: flex
-    border: 1px solid #434343
-    background: #161616
+    border: $bd-width-sm solid $gray
+    background: $dark-gray
     padding: 1.2rem
     justify-content: space-between
     align-items: center
-    color: white
+    color: $white
     cursor: pointer
     transition: 0.2s
     outline: none
@@ -120,10 +123,10 @@
 
   .select__field:hover,
   .select__field:focus
-    border: 1px solid white
+    border: $bd-width-sm solid $white
 
   .select__field--focus
-    border-radius: 5px
+    border-radius: $bd-radius-lg
 
   .select__arrowDown
     width: 15px
@@ -132,7 +135,7 @@
   .select__options
     position: absolute
     width: 100%
-    background: black
+    background: $black
     max-height: 10rem
     overflow-y: auto
     z-index: 1000
@@ -147,5 +150,5 @@
     transition: background 0.2s
 
     &:hover
-      background: #434343
+      background: $light-gray
 </style>
