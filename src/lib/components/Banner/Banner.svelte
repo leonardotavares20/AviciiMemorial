@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { BannerTimeline } from "$lib/assets/animations/timeline/BannerTimeline";
+  import { BannerTimeline } from "@/assets/animations/timeline/BannerTimeline";
 
   let timeline: gsap.core.Timeline;
 
@@ -83,6 +83,10 @@
       justify-content: center
 
     .memory-container__titles-content
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
       max-width: 750px
       text-align: center
       width: 60%
@@ -103,4 +107,5 @@
     .memory-container__name
       padding-top: $sp-lg-3x
       opacity: 0
+      max-width: 130px
 </style>

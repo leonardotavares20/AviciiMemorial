@@ -7,7 +7,7 @@
   import FieldsShare from "$lib/components/FieldsShare/FieldsShare.svelte";
   import { setOpacityBackground } from "$lib/assets/animations/form/shareForm";
   import { ScrollShare } from "$lib/assets/animations/scroll/ScrollShare";
-  import { FormTimeline } from "$lib/assets/animations/timeline/FormTimeline";
+  import { FormTimeline } from "@/assets/animations/timeline/FormTimeline";
   import { scrollFormAnimationCompleted } from "$lib/stores/form-share";
 
   let timeline: gsap.core.Timeline;

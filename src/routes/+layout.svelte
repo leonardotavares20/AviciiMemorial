@@ -1,4 +1,5 @@
 <script>
+  import "../app.css";
   import Header from "$lib/components/Header/Header.svelte";
   import { createSmoothScroll } from "$lib/assets/lenis/lenis";
   import { onMount } from "svelte";
@@ -10,13 +11,15 @@
 </script>
 
 <div class="app">
-  <Header />
+  <Header></Header>
   <main>
-    <slot />
+    <slot></slot>
   </main>
 
   <footer></footer>
 </div>
+
+<slot></slot>
 
 <style>
 </style>
