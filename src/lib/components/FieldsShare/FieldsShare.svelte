@@ -89,6 +89,8 @@
 <Button type="submit" submitForm>Submit</Button>
 
 <style lang="sass">
+  @import '../../../styles/variables/_color'
+
   .share-form__characters
     font-size: 0.7rem
     align-self: flex-start
@@ -97,7 +99,7 @@
     font-size: 0.9rem
     font-style: italic
     margin-top: 5px
-    color: gray
+    color: $light-gray
 
   .share-form__file-preview
     width: 30%
@@ -110,11 +112,11 @@
   .share-form__recaptcha
     width: 300px
     height: 70px
-    background: white
+    background: $white
     display: flex
     justify-content: center
     align-items: center
-    color: black
+    color: $black
     margin-top: 15px
     margin-bottom: 30px
 
@@ -122,5 +124,5 @@
     font-size: 12px
     font-style: italic
     margin-bottom: 40px
-    color: grey
+    color: $light-gray
 </style>

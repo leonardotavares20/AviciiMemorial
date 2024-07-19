@@ -27,7 +27,9 @@
 </section>
 
 <style lang="sass">
+    @import '../../styles/variables/_color'
+
     .memories-section
       margin: auto
-      color: white
+      color: $white
 </style>

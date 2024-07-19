@@ -31,12 +31,15 @@
 </button>
 
 <style lang="sass">
+    @import '../../../styles/variables/_color'
+    @import '../../../styles/variables/_border'
+
     .button
-        background: black
-        color: white
+        background: $black
+        color: $white
         font-family: 'Lato'
         text-transform: uppercase
-        border: 2px solid #434343
+        border: $bd-width-md solid $gray
         letter-spacing: 2px
         font-weight: 600
         cursor: pointer
@@ -44,7 +47,7 @@
         overflow: hidden
 
     .button:hover
-        border-color: white
+        border-color: $white
         z-index: 10
         transition: 0.2s
 
@@ -55,7 +58,7 @@
         transform: translateY(30px)
         font-size: 1.1rem
         margin-bottom: 10px
-        border: 2px solid white
+        border: $bd-width-md solid $white
 
     .button--close-form
         width: 110px
@@ -63,14 +66,14 @@
         height: 72px
         z-index: 10
         font-size: 1.1rem
-        border-color: white
+        border-color: $white
         margin-bottom: 50px
 
     .button--cancel-file
-        background: transparent
+        background: $transparent
         text-decoration: underline
         border: 0
-        color: white
+        color: $white
         font-size: 1rem
         text-decoration-thickness: 1px
         text-underline-offset: 5px
@@ -79,6 +82,6 @@
         width: 110px
         height: 50px
         font-size: 0.9rem
-        border-color: white
+        border-color: $white
         margin-bottom: 10px
 </style>

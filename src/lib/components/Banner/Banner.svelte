@@ -45,10 +45,12 @@
 </section>
 
 <style lang="sass">
+    @import '../../../styles/variables/_color'
+
     .memory-container
       position: relative
       user-select: none
-      color: white
+      color: $white
       overflow: hidden
       height: 110vh
 

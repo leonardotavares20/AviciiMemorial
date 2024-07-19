@@ -7,14 +7,17 @@
 <span class="checkmark" class:checkmark--hoverLabel={hoverLabel}></span>
 
 <style lang="sass">
+    @import '../../../styles/variables/_color'
+    @import '../../../styles/variables/_border'
+
   .checkmark
     position: absolute
     top: 0
     left: 0
     width: 20px
     height: 20px
-    border: 1px solid #353535
-    background-color: #000000
+    border: $bd-width-sm solid $gray
+    background-color: $black
     pointer-events: none
 
   .checkmark:after 
@@ -28,14 +31,14 @@
   .checkmark:after 
     left: 7px
     top: 3px
-    height: 9px
+    height: 8px
     width: 3.8px
-    border: solid white
-    border-width: 0 2px 2px 0
+    border: solid $white
+    border-width: 0 $bd-width-md $bd-width-md 0
     -webkit-transform: rotate(45deg)
     -ms-transform: rotate(45deg)
     transform: rotate(45deg)
 
   .checkmark--hoverLabel
-    border: 1px solid #999999
+    border: $bd-width-sm solid $light-gray
 </style>

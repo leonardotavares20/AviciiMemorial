@@ -52,6 +52,8 @@
 </form>
 
 <style lang="sass">
+    @import '../../../styles/variables/_color'
+
     .formCard
       display: grid
       row-gap: 8px 
@@ -61,13 +63,13 @@
       grid-template-columns: 2fr 1fr
 
     .formCard__policy
-      color: #434343
+      color: $gray
       text-decoration: underline
 
     .formCard__policy:hover
-      color: white
+      color: $white
       text-decoration: none
 
     .formCard__policy--hoverLabel
-      color: #999999
+      color: $light-gray
 </style>

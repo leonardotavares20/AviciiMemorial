@@ -65,16 +65,18 @@
 </section>
 
 <style lang="sass">
+    @import '../../styles/variables/_color'
+
     .share-container
       position: relative
       height: 100%
-      background: white
+      background: $white
 
     .share-form
       width: 100%
-      background: black
+      background: $black
       justify-content: center
-      color: white
+      color: $white
 
     .share-form__form
       width: 500px

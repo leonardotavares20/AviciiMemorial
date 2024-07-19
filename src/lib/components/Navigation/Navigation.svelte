@@ -23,6 +23,8 @@
 <div class="header-suport"></div>
 
 <style lang="sass">
+  @import '../../../styles/variables/_color'
+
   .header
       width: 100%
       text-align: center
@@ -39,7 +41,7 @@
 
   .header--scrollViewHeight
       height: 60px
-      background: black
+      background: $black
       transition: 0.5s
 
   .navigation

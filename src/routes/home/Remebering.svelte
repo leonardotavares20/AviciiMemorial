@@ -35,8 +35,10 @@
 </section>
 
 <style lang="sass">
+    @import '../../styles/variables/_color'
+
     .remembering-container
-        color: white
+        color: $white
         letter-spacing: 2px
         width: 100%
         display: flex
