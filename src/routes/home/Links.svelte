@@ -22,20 +22,22 @@
 
 <style lang="sass">
     @import '../../styles/variables/_color'
+    @import '../../styles/variables/_spacing'
+    @import '../../styles/variables/_font'
 
     .links-container
         color: $white
         opacity: 0
-        margin-top: 30px
+        margin-top: $sp-lg-1x
         display: flex
         justify-content: center
-        font-size: 1rem
+        font-size: $ft-md
         text-transform: uppercase
         letter-spacing: 2px
         
     .links-container__menu-links
         display: flex
-        gap: 10px
+        gap: $sp-sm-1x
 
     .links-container__link
         color: $white

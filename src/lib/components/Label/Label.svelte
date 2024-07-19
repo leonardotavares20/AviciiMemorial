@@ -30,13 +30,14 @@
 
 <style lang="sass">
     @import '../../../styles/variables/_color'
+    @import '../../../styles/variables/_spacing'
 
     .label--form-header
       position: relative
       display: flex
       align-items: center
       color: $gray
-      gap: 20px
+      gap: $sp-md-2x
 
     .label--form-header:hover
       color: $light-gray
@@ -46,7 +47,7 @@
       color: $white
       letter-spacing: 2px
       text-align: center
-      margin-bottom: 10px
+      margin-bottom: $sp-sm-1x
 
     .label--share-name
       display: block
@@ -56,7 +57,7 @@
 
     .label--file-label
       width: 100%
-      margin-top: 10px
+      margin-top: $sp-sm-1x
       font-weight: 600 
       cursor: pointer
       letter-spacing: 2px

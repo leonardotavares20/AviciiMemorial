@@ -17,6 +17,7 @@
 <style lang="sass">
     @import '../../../styles/variables/_color'
     @import '../../../styles/variables/_border'
+    @import '../../../styles/variables/_spacing'
 
     .overlay
       height: 100px
@@ -28,11 +29,11 @@
       pointer-events: auto
 
     .hoverCard
-      padding: 1rem
+      padding: $sp-md
       color: $white
       width: 22rem
       top: 70%
-      margin-top: 2.3rem
+      margin-top: $sp-lg-1x
       background-color: $black
       border: $bd-width-sm solid $gray
       transform: translateX(-100px)

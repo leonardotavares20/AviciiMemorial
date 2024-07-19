@@ -33,12 +33,14 @@
 <style lang="sass">
     @import '../../../styles/variables/_color'
     @import '../../../styles/variables/_border'
+    @import '../../../styles/variables/_spacing'
+    @import '../../../styles/variables/_font'
 
   .input
     display: block
     padding: 1.2rem 0rem 1.2rem 1.2rem
     max-width: 332px
-    font-size: 1rem
+    font-size: $ft-md
     border: $bd-width-sm solid #434343
     background: $dark-gray
     color: $white
@@ -50,7 +52,7 @@
     border: $bd-width-sm solid $white
 
   .input::placeholder
-    font-size: 1rem
+    font-size: $ft-md
     color: $white
     letter-spacing: 1px
     text-transform: uppercase
@@ -61,11 +63,11 @@
     max-width: 410px
     background-color: $white
     height: 52px
-    padding: 0px 20px
+    padding: 0px $sp-md-2x
 
   .input--white::placeholder
     color: $light-gray
-    font-size: 1rem
+    font-size: $ft-md
     text-transform: capitalize
 
   .input--borderWhite

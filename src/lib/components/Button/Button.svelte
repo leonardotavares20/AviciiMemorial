@@ -33,6 +33,8 @@
 <style lang="sass">
     @import '../../../styles/variables/_color'
     @import '../../../styles/variables/_border'
+    @import '../../../styles/variables/_spacing'
+    @import '../../../styles/variables/_font'
 
     .button
         background: $black
@@ -56,8 +58,8 @@
         height: 72px
         opacity: 0
         transform: translateY(30px)
-        font-size: 1.1rem
-        margin-bottom: 10px
+        font-size: $ft-md-1x
+        margin-bottom: $sp-sm-1x
         border: $bd-width-md solid $white
 
     .button--close-form
@@ -65,23 +67,23 @@
         width: 130px
         height: 72px
         z-index: 10
-        font-size: 1.1rem
+        font-size: $ft-md-1x
         border-color: $white
-        margin-bottom: 50px
+        margin-bottom: $sp-lg-3x
 
     .button--cancel-file
         background: $transparent
         text-decoration: underline
         border: 0
         color: $white
-        font-size: 1rem
+        font-size: $ft-md
         text-decoration-thickness: 1px
-        text-underline-offset: 5px
+        text-underline-offset: $sp-xs
 
     .button--send
         width: 110px
         height: 50px
-        font-size: 0.9rem
+        font-size: $ft-sm-4x
         border-color: $white
-        margin-bottom: 10px
+        margin-bottom: $sp-sm-1x
 </style>

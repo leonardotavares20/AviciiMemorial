@@ -36,6 +36,7 @@
 
 <style lang="sass">
     @import '../../styles/variables/_color'
+    @import '../../styles/variables/_spacing'
 
     .remembering-container
         color: $white
@@ -50,13 +51,13 @@
         width: 60%
         display: grid
         opacity: 0
-        gap: 20px
+        gap: $sp-md-2x
         justify-items: center
         text-align: center
         max-width: 650px
 
     .remembering-content__title
-        padding-bottom: 5px
+        padding-bottom: $sp-sm
 
     .remembering-content__text
         line-height: 27px

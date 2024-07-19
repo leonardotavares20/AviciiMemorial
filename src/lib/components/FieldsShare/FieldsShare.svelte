@@ -90,20 +90,22 @@
 
 <style lang="sass">
   @import '../../../styles/variables/_color'
+  @import '../../../styles/variables/_spacing'
+  @import '../../../styles/variables/_font'
 
   .share-form__characters
-    font-size: 0.7rem
+    font-size: $ft-sm-2x
     align-self: flex-start
 
   .share-form__file-alert
-    font-size: 0.9rem
+    font-size: $ft-sm-4x
     font-style: italic
-    margin-top: 5px
+    margin-top: $sp-xs
     color: $light-gray
 
   .share-form__file-preview
     width: 30%
-    margin-top: 10px
+    margin-top: $sp-sm-1x
     height: 30%
 
   .share-form__file-preview--hidden
@@ -117,12 +119,12 @@
     justify-content: center
     align-items: center
     color: $black
-    margin-top: 15px
-    margin-bottom: 30px
+    margin-top: $sp-sm-4x
+    margin-bottom: $sp-md-2x
 
   .share-form__privacy-policy
-    font-size: 12px
+    font-size: $ft-sm-2x
     font-style: italic
-    margin-bottom: 40px
     color: $light-gray
+    margin-bottom: 2.5rem
 </style>

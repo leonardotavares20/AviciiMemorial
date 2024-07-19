@@ -31,6 +31,7 @@
 <style lang="sass">
     @import '../../../styles/variables/_color'
     @import '../../../styles/variables/_border'
+    @import '../../../styles/variables/_spacing'
 
   .select
     position: relative
@@ -44,9 +45,9 @@
     text-transform: uppercase
     border: $bd-width-sm solid $gray
     background: $dark-gray
+    padding: $sp-md-2x
     width: 100%
     font-size: 1rem
-    padding: 1.2rem
     justify-content: space-between
     align-items: center
     color: $white
@@ -68,8 +69,19 @@
     width: 15px
     height: auto
 
+  .select__options
+    position: absolute
+    width: 100%
+    background: $black
+    max-height: 10rem
+    overflow-y: auto
+    z-index: 10
+    margin-top: $sp-xs
+    padding: 0
+    list-style: none
+      
   .select__option
-    padding: .5rem 1rem
+    padding: $sp-sm $sp-md
     text-transform: capitalize
     cursor: pointer
     font-size: .9rem
