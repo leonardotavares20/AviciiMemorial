@@ -125,6 +125,6 @@
   .share-form__privacy-policy
     font-size: $ft-sm-2x
     font-style: italic
-    margin-bottom: $lg-3x
     color: $light-gray
+    margin-bottom: 2.5rem
 </style>
