@@ -1,94 +1,31 @@
 <script lang="ts">
-  import { createEventDispatcher, onMount, onDestroy } from "svelte";
-  export let countries: Array<{ name: string; code: string }>;
-  let selectedOption: string;
-  let selectedCode: string = "";
-  let open: boolean = false;
-  export let name: string = "";
+  import type { CountryRequest } from "$lib/repositories/CountryRepository";
 
-  const dispatch = createEventDispatcher();
-  let componentElement: HTMLElement;
-
-  function selectOption(name: string, code: string): void {
-    open = false;
-    selectedOption = name;
-    selectedCode = code;
-    dispatch("changeOption", { name, code });
-  }
-
-  function toggleDropdown(): void {
-    open = !open;
-    if (open) {
-      document.addEventListener("keydown", escapeKey);
-    } else {
-      document.removeEventListener("keydown", escapeKey);
-    }
-  }
-
-  function escapeKey(event: KeyboardEvent): void {
-    if (event.key === "Escape") {
-      open = false;
-      document.removeEventListener("keydown", escapeKey);
-    }
-  }
-
-  function clickOutside(event: MouseEvent): void {
-    if (componentElement && !componentElement.contains(event.target as Node)) {
-      open = false;
-      document.removeEventListener("keydown", escapeKey);
-    }
-  }
-
-  onMount((): void => {
-    if (typeof document !== "undefined")
-      document.addEventListener("click", clickOutside);
-  });
-
-  onDestroy((): void => {
-    if (typeof document !== "undefined")
-      document.removeEventListener("click", clickOutside);
-  });
+  export let options: Array<{ name: string; value: string }>;
+  export let name: string;
 </script>
 
-<div bind:this={componentElement} class="select">
-  <div
-    class="select__field"
-    class:select__field--focus={open}
-    on:click={toggleDropdown}
-    tabindex="0"
-    role="button"
-    aria-hidden="true"
-    aria-haspopup="listbox"
-    aria-expanded={open}
-  >
-    {selectedOption ? selectedOption : "Select Country"}
-    <img
-      class="select__arrowDown"
-      src="/arrows/arrowDown.svg"
-      aria-hidden="true"
-      alt=""
-    />
-    <input
-      class="select__input"
-      type="text"
-      id={name}
-      {name}
-      value={selectedCode || ""}
-    />
-  </div>
-  {#if open}
-    <ul class="select__options" role="listbox">
-      {#each countries as country}
-        <li
-          class="select__option"
-          aria-hidden="true"
-          on:click={() => selectOption(country.name, country.code)}
-        >
-          {country.name}
-        </li>
+<div class="select">
+  <select class="select__field" {name} id="">
+    <option class="select__option" disabled selected value="0"
+      >Select Country</option
+    >
+    {#await options}
+      <option value="0" selected>Loading Countries...</option>
+    {:then options}
+      {#each options as option}
+        <option value={option.value} class="select__option" aria-hidden="true">
+          {option.name}
+        </option>
       {/each}
-    </ul>
-  {/if}
+    {/await}
+  </select>
+  <img
+    class="select__arrowDown"
+    src="/arrows/arrowDown.svg"
+    aria-hidden="true"
+    alt=""
+  />
 </div>
 
 <style lang="sass">
@@ -98,16 +35,19 @@
 
   .select
     position: relative
-    text-transform: uppercase
     text-align: start
     user-select: none
-    letter-spacing: 1px
 
   .select__field
     display: flex
+    -webkit-appearance: none
+    letter-spacing: 1px
+    text-transform: uppercase
     border: $bd-width-sm solid $gray
     background: $dark-gray
     padding: $sp-md-2x
+    width: 100%
+    font-size: 1rem
     justify-content: space-between
     align-items: center
     color: $white
@@ -115,19 +55,15 @@
     transition: 0.2s
     outline: none
 
-  .select__input
+  .select__arrowDown
     position: absolute
-    opacity: 0
-    cursor: pointer
-    height: 0
-    width: 0
+    bottom: 35%
+    right: 5%
+    pointer-events: none
 
   .select__field:hover,
   .select__field:focus
     border: $bd-width-sm solid $white
-
-  .select__field--focus
-    border-radius: $bd-radius-lg
 
   .select__arrowDown
     width: 15px
@@ -139,17 +75,18 @@
     background: $black
     max-height: 10rem
     overflow-y: auto
-    z-index: 1000
+    z-index: 10
     margin-top: $sp-xs
     padding: 0
     list-style: none
-
+      
   .select__option
     padding: $sp-sm $sp-md
+    text-transform: capitalize
     cursor: pointer
     font-size: .9rem
     transition: background 0.2s
 
-    &:hover
-      background: $light-gray
+  .select__option:hover
+    background: $light-gray
 </style>

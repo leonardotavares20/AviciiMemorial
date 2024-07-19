@@ -1,38 +1,51 @@
-# create-svelte
+# Avicii
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+![Alt Text](./static/readme.png)
 
-## Creating a project
+This is a personal project, which I am using to learn and train what I know in Svelte. <br>
+Miss you Tim❤️
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Dependencies
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- GSAP - Animation Lib
+- Axios - HTTP Requests
+- Lenis - Scroll Lib
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## DevDependencies
+- Svelte - Framework
+- SvelteKit - Svelte Framework
+- Vite - Build
+- Sass - Preprocessor CSS
+- Typescript - Superset of JS
 
-## Developing
+## Clone the Repo
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Using Git: 
+``
+git clone https://github.com/leonardotavares20/AviciiSvelte.git
+``
 
-```bash
-npm run dev
+- Using GitHub CLI:
+``
+gh repo clone leonardotavares20/AviciiSvelte
+``
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Install Dependencies
+``
+pnpm install
+``
 
-## Building
+## Run the Dev Server
+``
+pnpm dev
+``
 
-To create a production version of your app:
+## Open the App
 
-```bash
-npm run build
-```
+``
+http://localhost:5173
+``
 
-You can preview the production build with `npm run preview`.
+## License
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This project is licensed under the MIT License - see the LICENSE file for details.

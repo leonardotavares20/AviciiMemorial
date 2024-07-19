@@ -1,21 +1,16 @@
 <script lang="ts">
-  import { countries } from "../../assets/country/country";
+  import { CountryRequest } from "$lib/repositories/CountryRepository";
 
   import Select from "../Select/Select.svelte";
   import Input from "../Input/Input.svelte";
   import CheckBox from "../CheckBox/CheckBox.svelte";
   import Button from "../Button/Button.svelte";
   import Label from "../Label/Label.svelte";
+  import { onMount } from "svelte";
+
+  let countries: Array<{ name: string; value: string }> = [];
 
   let hoverLabel: boolean = false;
-
-  interface EventOption {
-    detail: string;
-  }
-
-  const getOption = (event: EventOption): void => {
-    console.log(event.detail);
-  };
 
   const mouseEnterLabel = (): void => {
     hoverLabel = true;
@@ -24,10 +19,24 @@
   const mouseLeaveLabel = (): void => {
     hoverLabel = false;
   };
+
+  onMount(() => {
+    let countriesRequest = new CountryRequest(
+      "https://countriesnow.space/api/v0.1/countries",
+      {}
+    );
+
+    countriesRequest.fetchCountries().then((response) => {
+      countries = response?.data.data.map((country: any) => ({
+        name: country.country,
+        value: country.iso3,
+      }));
+    });
+  });
 </script>
 
 <form action="" class="formCard">
-  <Select name="country" on:changeOption={getOption} {countries} />
+  <Select options={countries} name="country" />
   <div class="formCard__column">
     <Input type="email" name="email" placeholder="E-Mail" />
     <Button type="submit">Send</Button>
@@ -56,8 +65,9 @@
     @import '../../../styles/variables/_spacing'
 
     .formCard
-      display: grid
-      row-gap: $sp-sm
+      display: flex
+      flex-direction: column
+      row-gap: $sp-sm 
 
     .formCard__column
       display: grid
