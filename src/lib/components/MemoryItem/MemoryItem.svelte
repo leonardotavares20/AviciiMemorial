@@ -12,21 +12,23 @@
 
 <style lang="sass">
     @import '../../../styles/variables/_color'
+    @import '../../../styles/variables/_spacing'
+    @import '../../../styles/variables/_font'
 
     .memory
       text-align: center
 
     .memory__from
-      font-size: 14px
+      font-size: $ft-sm-3x
       align-self: flex-start
     
     .memory__message
-      line-height: 16px
-      font-size: 12px
-      margin: 25px 0px
+      line-height: $sp-md
+      font-size: $ft-sm-3x
+      margin: $sp-lg 0px
       align-self: flex-start
 
     .memory__date
-      font-size: 10px
+      font-size: $ft-sm-1x
       color: $light-gray
 </style>

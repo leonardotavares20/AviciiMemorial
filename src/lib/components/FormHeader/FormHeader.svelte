@@ -53,10 +53,11 @@
 
 <style lang="sass">
     @import '../../../styles/variables/_color'
+    @import '../../../styles/variables/_spacing'
 
     .formCard
       display: grid
-      row-gap: 8px 
+      row-gap: $sp-sm
 
     .formCard__column
       display: grid

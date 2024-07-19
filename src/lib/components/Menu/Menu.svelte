@@ -6,12 +6,14 @@
 <menu class:menuLinks class:menuSocials><slot /></menu>
 
 <style lang="sass">
+    @import '../../../styles/variables/_spacing'
+
     .menuLinks
         display: flex
         justify-content: center
         align-self: center
         align-items: center
-        gap: 3rem
+        gap: $sp-lg-2x
         list-style-type: none
 
     .menuSocials
@@ -20,6 +22,6 @@
         height: 100%
         align-items: center
         width: 100%
-        gap: 1.2rem
+        gap: $sp-md-2x
         list-style-type: none
 </style>

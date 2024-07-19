@@ -7,11 +7,13 @@
 </fieldset>
 
 <style lang="sass">
+    @import '../../../styles/variables/_spacing'
+    
     .fieldset-share-form
         display: flex
-        gap: 10px
+        gap: $sp-sm-1x
         justify-content: center
-        margin-bottom: 20px
+        margin-bottom: $sp-md-2x
         align-items: center
         flex-direction: column
         text-align: center

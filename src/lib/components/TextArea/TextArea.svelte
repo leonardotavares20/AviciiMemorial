@@ -26,12 +26,15 @@
 ></textarea>
 
 <style lang="sass">
+    @import '../../../styles/variables/_spacing'
+    @import '../../../styles/variables/_font'
+
     .text_area-story
         width: 408px
         resize: none 
         height: 200px
         border: 0
         border-radius: 0
-        padding: 20px
-        font-size: 1rem
+        padding: $sp-md-2x
+        font-size: $ft-md
 </style>

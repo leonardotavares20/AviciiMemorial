@@ -46,6 +46,8 @@
 
 <style lang="sass">
     @import '../../../styles/variables/_color'
+    @import '../../../styles/variables/_spacing'
+    @import '../../../styles/variables/_font'
 
     .memory-container
       position: relative
@@ -88,17 +90,17 @@
     .memory-container__details
       display: grid
       opacity: 0
-      row-gap: 8px
+      row-gap: $sp-sm
 
     .memory-container__text
-      font-size: 1.3rem
+      font-size: $ft-md-3x
       letter-spacing: 4.5px
 
     .memory-container__dates
-      font-size: 0.6rem
+      font-size: $ft-sm
       letter-spacing: 5px
 
     .memory-container__name
-      padding-top: 50px
+      padding-top: $sp-lg-3x
       opacity: 0
 </style>

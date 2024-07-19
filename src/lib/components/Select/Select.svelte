@@ -94,6 +94,7 @@
 <style lang="sass">
     @import '../../../styles/variables/_color'
     @import '../../../styles/variables/_border'
+    @import '../../../styles/variables/_spacing'
 
   .select
     position: relative
@@ -106,7 +107,7 @@
     display: flex
     border: $bd-width-sm solid $gray
     background: $dark-gray
-    padding: 1.2rem
+    padding: $sp-md-2x
     justify-content: space-between
     align-items: center
     color: $white
@@ -139,12 +140,12 @@
     max-height: 10rem
     overflow-y: auto
     z-index: 1000
-    margin-top: 5px
+    margin-top: $sp-xs
     padding: 0
     list-style: none
 
   .select__option
-    padding: .5rem 1rem
+    padding: $sp-sm $sp-md
     cursor: pointer
     font-size: .9rem
     transition: background 0.2s
