@@ -6,6 +6,7 @@
   import SubTitle from "$lib/components/SubTitle/SubTitle.svelte";
   import MemoryItem from "$lib/components/MemoryItem/MemoryItem.svelte";
   import { ScrollMemories } from "$lib/assets/animations/scroll/ScrollMemories";
+  import Pagination from "@/components/Pagination/Pagination.svelte";
 
   onMount(() => {
     const scroll = new ScrollMemories();
@@ -24,6 +25,7 @@
       <MemoryItem {date} {from} {message} />
     {/each}
   </Grid>
+  <Pagination />
 </section>
 
 <style lang="sass">
