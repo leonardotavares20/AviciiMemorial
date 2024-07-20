@@ -19,7 +19,5 @@
   <footer></footer>
 </div>
 
-<slot></slot>
-
 <style>
 </style>
