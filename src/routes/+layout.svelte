@@ -12,9 +12,13 @@
 
 <div class="app">
   <Header></Header>
+  
   <main>
     <slot></slot>
   </main>
 
   <footer></footer>
 </div>
+
+<style>
+</style>
