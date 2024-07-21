@@ -1,6 +1,6 @@
 <script>
   import "../app.css";
-  import Header from "$lib/components/Header/Header.svelte";
+  import Header from "@/components/Header/Header.svelte";
   import { createSmoothScroll } from "$lib/assets/lenis/lenis";
   import { onMount } from "svelte";
   import "../styles/init.sass";

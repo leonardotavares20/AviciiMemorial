@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { ScrollLinks } from "$lib/assets/animations/scroll/ScrollLinks";
+  import { ScrollLinks } from "@/lib/assets/animations/scroll/ScrollLinks";
+
   import { onMount } from "svelte";
 
   onMount(() => {
@@ -21,9 +22,9 @@
 </div>
 
 <style lang="sass">
-    @import '../../styles/variables/_color'
-    @import '../../styles/variables/_spacing'
-    @import '../../styles/variables/_font'
+    @import '@/styles/variables/_color'
+    @import '@/styles/variables/_spacing'
+    @import '@/styles/variables/_font'
 
     .links-container
         color: $white
