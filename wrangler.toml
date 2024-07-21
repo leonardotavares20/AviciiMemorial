@@ -1,0 +1,4 @@
+name = "aviciimemorial"
+type = "typescript"
+workers_dev = true
+node_compat = true
