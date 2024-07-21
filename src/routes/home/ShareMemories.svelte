@@ -6,7 +6,7 @@
   import Button from "@/components/Button/Button.svelte";
   import FieldsShare from "@/components/FieldsShare/FieldsShare.svelte";
   import { setOpacityBackground } from "$lib/assets/animations/form/shareForm";
-  import { ScrollShare } from "@/lib/assets/animations/scroll/scrollShare";
+  import { ScrollShare } from "@/lib/assets/animations/scroll/ScrollShare";
   import { FormTimeline } from "@/lib/assets/animations/timeline/FormTimeline";
   import { scrollFormAnimationCompleted } from "$lib/stores/form-share";
 

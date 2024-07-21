@@ -1,6 +1,4 @@
 <script lang="ts">
-  import type { CountryRequest } from "$lib/repositories/CountryRepository";
-
   export let options: Array<{ name: string; value: string }>;
   export let name: string;
 </script>
@@ -68,25 +66,4 @@
   .select__arrowDown
     width: 15px
     height: auto
-
-  .select__options
-    position: absolute
-    width: 100%
-    background: $black
-    max-height: 10rem
-    overflow-y: auto
-    z-index: 10
-    margin-top: $sp-xs
-    padding: 0
-    list-style: none
-      
-  .select__option
-    padding: $sp-sm $sp-md
-    text-transform: capitalize
-    cursor: pointer
-    font-size: .9rem
-    transition: background 0.2s
-
-  .select__option:hover
-    background: $light-gray
 </style>
