@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { BaseScroll } from "../bases/BaseScroll";
 import { scrollFormAnimationCompleted } from "$lib/stores/form-share";
 

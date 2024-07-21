@@ -11,11 +11,11 @@
 
 <div id="links-container" class="links-container">
   <ul class="links-container__menu-links">
-    <a class="links-container__link" href="#comments">
+    <a class="links-container__link" href="#memories-section">
       <li>Comments</li>
     </a>
     <li aria-hidden="true">•</li>
-    <a class="links-container__link" href="/images">
+    <a class="links-container__link" href="/">
       <li>Images</li>
     </a>
   </ul>
