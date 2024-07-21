@@ -2,7 +2,7 @@
   import ScrollTrigger from "gsap/dist/ScrollTrigger";
   import { onMount } from "svelte";
   import gsap from "gsap";
-  import { ScrollRemembering } from "$lib/assets/animations/scroll/ScrollRemembering";
+  import { ScrollRemembering } from "@/lib/assets/animations/scroll/scrollRemembering";
 
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -35,8 +35,8 @@
 </section>
 
 <style lang="sass">
-    @import '../../styles/variables/_color'
-    @import '../../styles/variables/_spacing'
+    @import '@/styles/variables/_color'
+    @import '@/styles/variables/_spacing'
 
     .remembering-container
         color: $white
