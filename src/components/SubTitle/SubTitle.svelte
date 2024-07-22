@@ -2,6 +2,7 @@
   export let sm: boolean = false;
   export let md: boolean = false;
   export let lg: boolean = false;
+  export let instagram = false;
 </script>
 
 <h2
@@ -10,6 +11,7 @@
   class:subtitle--large={lg}
   class:subtitle--medium={md}
   class:subtitle--small={sm}
+  class:subtitle--instagram={instagram}
 >
   <slot />
 </h2>
@@ -40,8 +42,13 @@
         max-width: 530px
         font-size: $ft-md-2x
 
-
     .subtitle--small
         max-width: 300px
         font-size: $ft-md
+
+    .subtitle--instagram
+      text-transform: capitalize
+      letter-spacing: 1px
+      margin-bottom: $sp-lg-1x
+      font-weight: 600
 </style>

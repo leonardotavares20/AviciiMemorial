@@ -3,6 +3,7 @@
   import Remebering from "./home/Remebering.svelte";
   import ShareMemories from "./home/ShareMemories.svelte";
   import Memories from "./home/Memories.svelte";
+  import Instagram from "./home/Instagram.svelte";
 </script>
 
 <svelte:head>
@@ -14,4 +15,4 @@
 <Remebering />
 <ShareMemories />
 <Memories />
-
+<Instagram />
