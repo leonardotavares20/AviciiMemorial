@@ -48,6 +48,7 @@
 
     .subtitle--instagram
       text-transform: capitalize
-      letter-spacing: 0.8px
+      letter-spacing: 1px
+      margin-bottom: $sp-lg-1x
       font-weight: 600
 </style>

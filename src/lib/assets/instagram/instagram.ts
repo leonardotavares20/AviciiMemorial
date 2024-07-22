@@ -1,22 +1,127 @@
-const instagram = [
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/451632410_1025455885369908_699392583062154229_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=18de74&_nc_ohc=ElIe-12jm4EQ7kNvgGJTNMB&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDGjE_9_s1J1yjU9Kkjjj5y2e1IVtnFHe65MlSM5_iSdw&oe=66A2CE03",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/449319494_365541006208315_908113879027162994_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=18de74&_nc_ohc=X6xbI24CPdMQ7kNvgF_hCmi&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYD_I7YpCpJzv9OCfvJo5jwJIdWN2DjtZ_fNCMwf1T9eZw&oe=66A2E1FF",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/448214401_475815724973658_5182050414606091155_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=18de74&_nc_ohc=VEVGne64DQcQ7kNvgHlTLih&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYD0S7AJVs6x5VSXl-cDCw8EjzRzgIw0zJDKk14_zoKH1w&oe=66A2DB3C",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/447141145_984873349908386_8402444747261869476_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=18de74&_nc_ohc=n5nuNSQNmowQ7kNvgFmA4YZ&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDJI11Iuv_zS7MjYQyi_QyplIK_MGKQqmK4epBEh_l_LA&oe=66A2E90F",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/443751189_804182111349920_5623831107444703513_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=18de74&_nc_ohc=8_SCAYDsfh8Q7kNvgFEUzYm&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYC7czGLlMH4UQVrdynX2F2uf1u0VQhTRPaeAn5JB0lWVQ&oe=66A2D298",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/445305436_478034104675412_3226814426286864235_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=18de74&_nc_ohc=GryTghiM3eYQ7kNvgESOR2P&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYBXUV58g7f2txMV2QJUaNaPxTJe4PdAjmV6EXWJghVkiA&oe=66A2E1B5",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/438997607_1156673988801284_5108869651967785699_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=uMcTB9mqUxwQ7kNvgEOoSpz&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYB_GSXoT9pR6P1C8LzYcVQgOnR61kcfoYWlkAt6szPF3Q&oe=66A2C107",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/431304449_391144233674299_2354615867452616395_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=HiyZsaKIfVgQ7kNvgEVKWXJ&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAg46-q2ZpHgZ6ou7klHRoOmKtg4SJcK__mtW3M1AsPnA&oe=66A2BD3A",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/431304449_391144233674299_2354615867452616395_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=HiyZsaKIfVgQ7kNvgEVKWXJ&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAg46-q2ZpHgZ6ou7klHRoOmKtg4SJcK__mtW3M1AsPnA&oe=66A2BD3A",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.36329-15/378573590_663097792209320_8961081788664427419_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=18de74&_nc_ohc=Gbxz1hZ6kPcQ7kNvgE8gQfe&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYC5xQvDTLKHiuvxJUoDy3IeBJpfOcdOBVwSxTSKs423TQ&oe=66A2E217",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/375513425_198277136469275_5246664502990045414_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=18de74&_nc_ohc=9ntda7CzXOcQ7kNvgHCpd1d&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYBF0CqQjN7EJ4HTHybygdYDWPfWP_vzurytrd-Ef3qaww&oe=66A2D4F9",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.36329-15/353640023_1223349161704957_1702989918286427964_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=18de74&_nc_ohc=eujsWsPohJgQ7kNvgGaZ-Ha&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAVEefWvqSyz_l1TnRz3ecdnvaPKLYqNomGFRDeYaL1JA&oe=66A2EDB8",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.36329-15/274733770_486234796328107_3223841596556012500_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=13-L1r1EE6wQ7kNvgHAJbyn&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYASO6PUh_sqgeCzGEJndPbAirSjFg4_MiOczLPggVv0Zg&oe=66A2D916",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/272241302_315352923705721_1524900048399271522_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=18de74&_nc_ohc=jcz58eCtfZwQ7kNvgEM9EnF&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYD7JhG1DOuL8LhLS8zi8e3ysNjdo5mQREytMmkLxzBslw&oe=66A2E933",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/250596770_608771050324374_1483555267370399523_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=18de74&_nc_ohc=Wcb8LQgVeXEQ7kNvgG8lc8z&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYBV2uYGHuIg79UFenJJpiTDs0U_sAuKA39mc9T_lLqS3A&oe=66A2DDA0",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.29350-15/187979501_160960346028605_2003073435972752429_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=18de74&_nc_ohc=mYuxS7p7GmoQ7kNvgHqDpzN&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAqOH3KCisf9cHn2fTGVgKY2XwbIU03wujHqaFt-W2RSg&oe=66A2D297",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.2885-15/79601148_2275637842727917_4541232696937927459_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=7B2x49Qs5KgQ7kNvgFN1aA9&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDyU91h8EuCykeUJJi-TPlq8vPVLwRJc08DcsMNANN3ZQ&oe=66A2BE3A",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.2885-15/67671017_2193098670817970_8778641854179730096_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=18de74&_nc_ohc=5eZgSq_ublAQ7kNvgFSoE5d&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYA3KLvka7ouJmQpW8UB5rxQomyaVNQwVVu47fpuCahhCw&oe=66A2ED61",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.2885-15/61732893_370528770263810_4562627603678930493_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=18de74&_nc_ohc=ABF0N48cN4UQ7kNvgFlN7O0&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYA5rNka2rgS0sAudxYTSSUq6KBbffXu7s7gNhdlxGBGYQ&oe=66A2ED0B",
-  "https://scontent-cph2-1.cdninstagram.com/v/t51.2885-15/58453756_165917707747275_2932777866350878915_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=18de74&_nc_ohc=09KRFSVB3moQ7kNvgEAUFUt&_nc_ht=scontent-cph2-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAYz5gakJ8wXKfExrWROmvEIJHZew4nAplkAj_km8_bvQ&oe=66A2E7E5",
+export const instagramCards: Array<{
+  type: string;
+  alt: string;
+  target: string;
+  background: string;
+}> = [
+  {
+    type: "video",
+    alt: "More than a decade past its release, “Levels” continues to bring audiences together on dance floors worldwide. Recently, the song was honored as the number 1 Tomorrowland Anthem in Tomorrowland Top 1000, voted by fans across the globe. These are highlights from Avicii performing the iconic track at Tomorrowland in 2013.",
+    target: "https://www.instagram.com/reel/C9kqGV7tGsi/",
+    background: "/instagram/1.jpg",
+  },
+  {
+    type: "video",
+    alt: "On August 5, 2016, Avicii performed his final set in Sweden, at Tallriken in Pildammsparken, Malmö. This is exclusive footage from the show, including highlights from Avicii performing “Without You”.",
+    target: "https://www.instagram.com/reel/C8uV9detucm/",
+    background: "/instagram/2.jpg",
+  },
+  {
+    type: "video",
+    alt: "The photobook “Avicii: The life and music of Tim Bergling” is now available in English for fans worldwide on the official Avicii online shop. The book pays tribute to Tim’s musical career and traces his life in images from his childhood to some of his biggest gigs, including some rare personal moments.",
+    target: "https://www.instagram.com/reel/C8KJiHKNx1Q/",
+    background: "/instagram/3.jpg",
+  },
+  {
+    type: "video",
+    alt: "This past weekend, Hey Brother reached 1 billion streams on Spotify, becoming Avicii’s fifth song to achieve this significant milestone – a remarkable achievement and a testament to his enduring musical legacy. In this interview, American bluegrass singer-songwriter and Hey Brother vocalist @dantyminski shares his story of how the collaboration came about. Thanks to all fans for your continuous support 💙",
+    target: "https://www.instagram.com/reel/C7mYTtlN3YV/",
+    background: "/instagram/4.jpg",
+  },
+  {
+    type: "image",
+    alt: "In honor of Avicii and his musical legacy, @siriusxm is launching “Avicii Radio: Music For a Better Day” – a radio channel where fans will be able to listen to Avicii’s hits, remixes, and music by those he inspired. Starting today, Avicii Radio is available on the SiriusXM app for fans exclusively in the US and Canada.",
+    target: "https://www.instagram.com/p/C7ULwektkbY/",
+    background: "/instagram/5.jpg",
+  },
+  {
+    type: "collection",
+    alt: "Congratulations to @nilerodgers on being awarded the prestigious Polar Music Prize, further cementing his status as one of the most influential musicians in history. Nile and Tim worked together several times, with “Lay Me Down” being one of their most prominent collaborations, featured on Avicii’s debut album “True”.",
+    target: "https://www.instagram.com/p/C7Pex3FOLbI/",
+    background: "/instagram/6.jpg",
+  },
+  {
+    type: "image",
+    alt: "“Avicii - I’m Tim”, a new documentary from @candamofilm, has been included as an Official Selection of the 2024 Tribeca Festival. The film expertly uncovers the genius behind Tim’s music through exclusive interviews and never before seen footage. Tribeca takes place Jun 5-16, 2024 in NYC. Wider release to be confirmed.",
+    target: "https://www.instagram.com/p/C57yv_Yt8Am/",
+    background: "/instagram/7.jpg",
+  },
+  {
+    type: "video",
+    alt: "“Avicii: Tim Bergling - Hans liv och musik” - a photobook including never before seen photos of Tim’s childhood years and the journey to becoming Avicii 💙 Now available on shop.avicii.com. The English version, “Avicii: The life and music of Tim Bergling” is coming soon.Photo: Sean Eriksson, Cim Ek, Bergling family archive",
+    target: "https://www.instagram.com/reel/C4IvkQVN6cF/",
+    background: "/instagram/8.jpg",
+  },
+  {
+    type: "video",
+    alt: "Since its release on August 11, 2017, Without You featuring Sandro Cavazza has become one of Avicii’s most beloved tracks. The song has now reached over 1 billion streams on Spotify. Thanks to all fans for listening and honoring Avicii’s legacy 💙",
+    target: "https://www.instagram.com/reel/C1MreLitYhI/",
+    background: "/instagram/9.jpg",
+  },
+  {
+    type: "collection",
+    alt: "“The whole album was by far like the biggest thing I’ve ever done. So you know I really felt from the start that these are, you know, it’s the best work I’ve ever done” – Tim ‘Avicii’ Bergling. Today marks the 10th anniversary of True, an album that shaped a new era of electronic dance music. With this album, Avicii showed his ability to seamlessly blend different genres, creating a unique and genre-defying sound that left a lasting impact on the music landscape.",
+    target: "https://www.instagram.com/p/CxInWH9NIy8/",
+    background: "/instagram/10.jpg",
+  },
+  {
+    type: "image",
+    alt: "Today marks Tim’s birthday 💙 Thank you for honoring his memory and celebrating his legacy.",
+    target: "https://www.instagram.com/p/Cw7oadYNgsb/",
+    background: "/instagram/11.jpg",
+  },
+  {
+    type: "collection",
+    alt: "Today marks 10 years since the release of Wake Me Up. With this song, Avicii showed the world his ability to blend different genres - transcending the boundaries of ages, music preferences, and cultures worldwide. ”It’s so far away from anything I’ve ever done before musically, so it’s obviously a weight off my shoulders that everything went the way it did” - Tim ’Avicii’ Bergling.",
+    target: "https://www.instagram.com/p/CtmIHGZtJr7/",
+    background: "/instagram/12.jpg",
+  },
+  {
+    type: "video",
+    alt: "The Avicii Experience tribute museum opened today in Stockholm. Fans can step into a recreation of Tim’s childhood bedroom and Los Angeles home studio with his grand piano, guitars and other instruments on display. Visitors can also listen to unreleased demos and mix Tim’s original music files to create their own sounds. The @timberglingfoundation participated in the creation of @aviciiexperience",
+    target: "https://www.instagram.com/tv/CacnraggrqZ/",
+    background: "/instagram/13.jpg",
+  },
+  {
+    type: "image",
+    alt: "A biography of Tim is now released. Through interviews with family, friends and colleagues, the book seeks to paint an honest picture of Tim’s fame, struggle and search in life. The book is available on aviciibook.com",
+    target: "https://www.instagram.com/p/CY__VuWoI-K/",
+    background: "/instagram/14.jpg",
+  },
+  {
+    type: "video",
+    alt: "Today is the 10-year anniversary of Levels. In celebration, Tim's final performance of Levels in Ibiza 2016 is released on music video platforms. What’s your best Levels memory?",
+    target: "https://www.instagram.com/tv/CVlAvS7IsQ-/",
+    background: "/instagram/15.jpg",
+  },
+  {
+    type: "video",
+    alt: "As of today, Avicii Arena is the new name of the iconic globe shaped arena in Sweden. Avicii Arena becomes a symbol and meeting place for an initiative focused on young people's mental hea#ForABetterDay. In celebration of the renaming, The Royal Stockholm Philharmonic Orchestra has recorded a symphonic version of the Avicii song 'For A Better Day', sung by 14-year-old Ella - watch the full performance on YouTube.",
+    target: "https://www.instagram.com/p/CPDu-rRJszT/",
+    background: "/instagram/16.jpg",
+  },
+  {
+    type: "collection",
+    alt: "Special thanks to all the fans & artists who celebrated Tim’s life & music at the Avicii Tribute Concert in Stockholm last week ❤️ watch the full concert on YouTube",
+    target: "https://www.instagram.com/p/B6G5xFuJAS8/",
+    background: "/instagram/17.jpg",
+  },
+  {
+    type: "image",
+    alt: "@timberglingfoundation will advocate for the recognition of suicide as a global health emergency and promote removing the stigma attached to the discussion of mental health issues. The foundation will also support issues for which Tim had a passion such as climate change, preservation of endangered species and global hunger.",
+    target: "https://www.instagram.com/p/B18-i5_pTlC/",
+    background: "/instagram/18.jpg",
+  },
+  {
+    type: "collection",
+    alt: "'I will never let go of music – I will continue to speak to my fans through it' Tim, 1989 – Forever",
+    target: "https://www.instagram.com/p/ByX1-EgondN/",
+    background: "/instagram/19.jpg",
+  },
+  {
+    type: "image",
+    alt: "“Spread positivity through my music, in message and enjoy success but not materialistic success” - Tim, 2018 Forever in our hearts, minds and ears ❤️",
+    target: "https://www.instagram.com/p/BweahBTpp3N/",
+    background: "/instagram/20.jpg",
+  },
 ];

@@ -18,12 +18,12 @@
     .grid-memories
       grid-template-columns: repeat(3, 1fr)
       width: 75%
+      max-width: 1420px
       gap: $sp-lg-4x
 
     .grid-instagram
-      width: 70vw
-      background: white
-      grid-template-rows: repeat(5, 1fr)
+      width: 80vw
+      max-width: 1420px
       justify-content: center
       grid-template-columns: repeat(4, 1fr)
       gap: $sp-sm
