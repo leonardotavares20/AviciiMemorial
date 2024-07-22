@@ -46,6 +46,7 @@
 
     .hoverCard__arrow
       position: absolute
+      left: 50%
       transform: translateY(-34px)
 
 </style>
