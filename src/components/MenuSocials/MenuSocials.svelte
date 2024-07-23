@@ -3,21 +3,24 @@
   import Anchor from "../Anchor/Anchor.svelte";
 </script>
 
-<header>
+<div class="menu-socials">
   <Menu menuSocials>
     <Anchor href={"/"}>
-      <img class="icon" src="/iconsSocials/spotify.svg" alt="Spotify" />
+      <img class="menu-socials__icon" src="/iconsSocials/spotify.svg" alt="Spotify" />
     </Anchor>
     <Anchor href={"/"}>
-      <img class="icon" src="/iconsSocials/youtube.svg" alt="Youtube" />
+      <img class="menu-socials__icon" src="/iconsSocials/youtube.svg" alt="Youtube" />
     </Anchor>
     <Anchor href={"/"}>
-      <img class="icon" src="/iconsSocials/apple.svg" alt="Apple Music" />
+      <img class="menu-socials__icon" src="/iconsSocials/apple.svg" alt="Apple Music" />
     </Anchor>
   </Menu>
-</header>
+</div>
 
 <style lang="sass">
-    .icon
+    .menu-socials
+      grid-area: socials
+
+    .menu-socials__icon
       width: 18px
 </style>

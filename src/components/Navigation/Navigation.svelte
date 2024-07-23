@@ -33,6 +33,7 @@
 
 <style lang="sass">
   @import '@/styles/variables/_color'
+  @import '@/styles/variables/_media'
 
   .header
       width: 100%
@@ -56,6 +57,22 @@
   .navigation
       width: 93%
       display: grid
-      grid-template-columns: 1fr 3fr 1.2fr
+      transition: 0.2s
+      grid-template-columns: 1fr 7fr 1.2fr
+      grid-template-areas: 'logo menu socials'
       align-items: center
+
+  @media screen and (max-width: $tb-lg)
+    .navigation
+      width: 96%
+      grid-template-columns: 1fr 10fr 1.2fr
+    
+    .header
+      height: 60px
+
+  @media screen and (max-width: $tb-md)
+    .navigation
+      width: 93%
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-areas: 'logo socials menu'
 </style>
