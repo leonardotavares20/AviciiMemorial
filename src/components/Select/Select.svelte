@@ -53,6 +53,9 @@
     transition: 0.2s
     outline: none
 
+  .select__field:focus
+    border-radius: 10px
+
   .select__arrowDown
     position: absolute
     bottom: 35%

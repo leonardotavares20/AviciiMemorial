@@ -19,6 +19,7 @@
     id="memory-container__banner"
     class="memory-container__banner"
     src="/banner/studio-tim.webp"
+    fetchpriority="high"
     alt="Tim Bergling"
   />
   <div class="memory-container__titles">
@@ -27,6 +28,7 @@
         id="memory-container__memory-board"
         class="memory-container__memory-board"
         src="/titles/titleMemoryBoard.svg"
+        fetchpriority="high"
         alt="The Avicii Memory"
       />
       <div id="memory-container__details" class="memory-container__details">
@@ -37,6 +39,7 @@
         id="memory-container__name"
         class="memory-container__name"
         src="/name/nameAvicii.svg"
+        fetchpriority="high"
         alt="Avicii"
       />
     </div>
@@ -56,7 +59,6 @@
       overflow: hidden
       height: 110vh
 
-
     .memory-container__overlay
       position: absolute
       z-index: 10
@@ -68,9 +70,10 @@
 
     .memory-container__banner
       width: 100%
+      height: 110%
+      object-position: 12% -2.40rem
       object-fit: cover
       opacity: 0
-      transform: translateY(-45px)
 
     .memory-container__memory-board
       opacity: 0

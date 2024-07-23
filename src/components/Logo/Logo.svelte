@@ -1,7 +1,10 @@
-<img src="/images/logo.svg" alt="Avicii" />
+<img class="logo" src="/images/logo.svg" alt="Avicii" />
 
-<style>
-  /* .logo {
-    @apply bg-blue-500 p-4 text-white;
-  } */
+<style lang="sass">
+  .logo
+    grid-area: logo
+
+  // .logo {
+  //   @apply text-red-50
+  // }
 </style>
