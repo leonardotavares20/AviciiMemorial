@@ -54,7 +54,7 @@
     outline: none
 
   .select__field:focus
-    border-radius: 10px
+    border-radius: $bd-radius-lg
 
   .select__arrowDown
     position: absolute
