@@ -4,7 +4,7 @@
   import FieldSet from "../FielSet/FieldSet.svelte";
   import Label from "../Label/Label.svelte";
   import TextArea from "../TextArea/TextArea.svelte";
-  import { setOpacityBackground } from "$lib/assets/animations/form/shareForm";
+  import { setOpacity } from "@/lib/helpers/setOpacity";
   import { setPreview, resetFileInput } from "$lib/helpers/form";
 
   export let timeline: gsap.core.Timeline;
@@ -21,7 +21,7 @@
 
   function hideForm(): void {
     timeline.reverse();
-    setOpacityBackground(1);
+    setOpacity("#share-form__background", 1, 0.3);
   }
 
   function handlePreviewImage(event: Event): void {

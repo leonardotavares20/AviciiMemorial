@@ -25,6 +25,7 @@
   
     .menu-links__mobile-button 
         width: 0
+        opacity: 1
         visibility: hidden
 
     @media screen and (max-width: $tb-md)
@@ -49,6 +50,7 @@
             align-items: center
             flex-direction: column
             justify-content: center
+            // transform: translateX(-0.5px)
             
         .menu-links__line
             width: 60%

@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>Avicii</title>
+  <title>Avicii - Memorial</title>
   <meta name="description" content="Avicii" />
 </svelte:head>
 

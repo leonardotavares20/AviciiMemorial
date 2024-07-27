@@ -1,15 +1,20 @@
 <script lang="ts">
   export let mouseEnterOverlay: boolean = true;
+  import { mediaQuery } from "svelte-legos";
+
+  let isTabletScreen = mediaQuery("(max-width: 1024px)");
 </script>
 
 <div class="overlay" class:overlay--pointerEvent={mouseEnterOverlay}>
   <div class="hoverCard" class:hoverCard--visible={mouseEnterOverlay}>
-    <img
-      class="hoverCard__arrow"
-      src="/arrows/arrowHoverCard.svg"
-      alt=""
-      aria-hidden="true"
-    />
+    {#if !$isTabletScreen}
+      <img
+        class="hoverCard__arrow"
+        src="/arrows/arrowHoverCard.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    {/if}
     <slot></slot>
   </div>
 </div>
@@ -18,11 +23,14 @@
     @import '@/styles/variables/_color'
     @import '@/styles/variables/_border'
     @import '@/styles/variables/_spacing'
+    @import '@/styles/variables/_media'
 
     .overlay
       height: 100px
       position: absolute
       width: 202px
+      display: grid
+      justify-content: center
       pointer-events: none
 
     .overlay--pointerEvent
@@ -32,11 +40,10 @@
       padding: $sp-md
       color: $white
       width: 22rem
-      top: 70%
+      top: 100%
       margin-top: $sp-lg-1x
       background-color: $black
       border: $bd-width-sm solid $gray
-      transform: translateX(-100px)
       transition: 0.2s ease
       opacity: 0
 
@@ -48,5 +55,21 @@
       position: absolute
       left: 50%
       transform: translateY(-34px)
+
+    @media screen and (max-width: $tb-md)
+        .overlay
+          height: 100%
+          position: relative
+          opacity: 1
+          width: 202px
+          display: grid
+          justify-content: center
+          pointer-events: all
+
+        .hoverCard
+          opacity: 1
+          border: 0
+          position: relative
+          top: 0
 
 </style>

@@ -5,11 +5,12 @@
   import HoverOverlay from "../HoverOverlay/HoverOverlay.svelte";
   import FormHeader from "../FormHeader/FormHeader.svelte";
   import ButtonMobile from "../ButtonMobile/ButtonMobile.svelte";
+  import { setOpacity } from "@/lib/helpers/setOpacity";
   import { mediaQuery } from "svelte-legos";
 
+  const isTabletScreen = mediaQuery("(max-width: 1024px)");
   let mouseIsOver: boolean = false;
-
-  const isLargeScreen = mediaQuery("(max-width: 1024px)");
+  let mobileMenuIsOpen: boolean = false;
 
   function mouseEnter(event: CustomEvent): void {
     mouseIsOver = true;
@@ -19,16 +20,18 @@
     mouseIsOver = false;
   }
 
-  function handleToggleButton(event: CustomEvent) {
-    return event.detail;
+  function handleToggleButton(event: CustomEvent): void {
+    mobileMenuIsOpen = event.detail;
+    if (mobileMenuIsOpen) setOpacity(".menu-links", 1, 0.2);
+    if (!mobileMenuIsOpen) setOpacity(".menu-links", 0, 0.15);
   }
 </script>
 
-<div class="menu-links">
-  {#if $isLargeScreen}
+<div class="menu-navigation">
+  {#if $isTabletScreen}
     <ButtonMobile on:clickmobilebutton={handleToggleButton} />
   {/if}
-  <Menu menuLinks>
+  <Menu {mobileMenuIsOpen} menuLinks>
     <Anchor href="/" ancorMenu>Tim Bergling Foundation</Anchor>
     <Anchor href="/" ancorMenu>Avicii Experience</Anchor>
     <HoverOverlay
@@ -49,11 +52,11 @@
   @import '@/styles/variables/_border'
   @import '@/styles/variables/_color'
 
-  .menu-links
+  .menu-navigation
     position: relative
 
   @media screen and (max-width: $tb-md)
-    .menu-links
+    .menu-navigation
       padding: 0
       display: flex
       grid-area: menu
