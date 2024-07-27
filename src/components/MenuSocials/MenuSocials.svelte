@@ -23,4 +23,9 @@
 
     .menu-socials__icon
       width: 18px
+      transition: 0.2s
+
+    .menu-socials__icon:hover
+      filter: invert(35%)
+      transition: 0.2s
 </style>

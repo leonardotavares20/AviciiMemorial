@@ -51,13 +51,28 @@
     @import '@/styles/variables/_color'
     @import '@/styles/variables/_spacing'
     @import '@/styles/variables/_font'
+    @import '@/styles/variables/_media'
 
     .memory-container
       position: relative
       user-select: none
       color: $white
+      contain: content
+      container-type: inline-size
+      content-visibility: visible
+      container-name: menu-container
       overflow: hidden
       height: 110vh
+
+    @container menu-container (max-width: 1024px)
+      .memory-container__banner
+          width: 120%
+          height: 110%
+          margin-top: 20px
+          transition: 0.2s
+
+      .memory-container__overlay
+          height: 10%
 
     .memory-container__overlay
       position: absolute
@@ -71,6 +86,7 @@
     .memory-container__banner
       width: 100%
       height: 110%
+      transition: 0.2s
       object-position: 12% -2.40rem
       object-fit: cover
       opacity: 0
@@ -81,18 +97,26 @@
     .memory-container__titles
       display: flex
       width: 100%
+      container-type: inline-size
+      container-name: titles
       position: absolute
       bottom: calc(15% + 5px)
       justify-content: center
+
+    @container titles (max-width: 768px)
+      .memory-container__text
+        padding-top: 0.5rem
+
+      .memory-container__name
+        padding-top: $sp-lg-1x
 
     .memory-container__titles-content
       display: flex
       flex-direction: column
       align-items: center
       justify-content: center
-      max-width: 750px
+      width: clamp(min(90%, 400px), 90%, max(35vw, 750px))
       text-align: center
-      width: 60%
 
     .memory-container__details
       display: grid
@@ -100,7 +124,7 @@
       row-gap: $sp-sm
 
     .memory-container__text
-      font-size: $ft-md-3x
+      font-size: clamp(1rem, $ft-md-3x, 2vw)
       letter-spacing: 4.5px
 
     .memory-container__dates
