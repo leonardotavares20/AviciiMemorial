@@ -44,7 +44,7 @@
       margin-top: $sp-lg-1x
       background-color: $black
       border: $bd-width-sm solid $gray
-      transition: 0.2s ease
+      // transition: 0.2s ease
       opacity: 0
 
     .hoverCard--visible
