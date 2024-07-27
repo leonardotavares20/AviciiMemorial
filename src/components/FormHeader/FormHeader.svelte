@@ -41,7 +41,7 @@
     <Input type="email" name="email" placeholder="E-Mail" />
     <Button type="submit">Send</Button>
   </div>
-  <div>
+  <div class="formCard__terms">
     <Label
       name="policy"
       on:mouseEnterLabel={mouseEnterLabel}
@@ -63,6 +63,7 @@
 <style lang="sass">
     @import '@/styles/variables/_color'
     @import '@/styles/variables/_spacing'
+    @import '@/styles/variables/_media'
 
     .formCard
       display: flex
@@ -83,4 +84,9 @@
 
     .formCard__policy--hoverLabel
       color: $light-gray
+
+    @media screen and (max-width: $tb-md)
+      .formCard__terms
+        display: flex
+        justify-content: center
 </style>

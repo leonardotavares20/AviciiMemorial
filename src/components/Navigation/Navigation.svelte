@@ -58,6 +58,7 @@
       width: 93%
       display: grid
       transition: 0.2s
+      z-index: 100
       grid-template-columns: 1fr 7fr 1.2fr
       grid-template-areas: 'logo menu socials'
       align-items: center
@@ -69,6 +70,7 @@
     
     .header
       height: 60px
+      background: $black
 
   @media screen and (max-width: $tb-md)
     .navigation
