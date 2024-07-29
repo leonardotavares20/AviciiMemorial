@@ -22,8 +22,9 @@
 
   function handleToggleButton(event: CustomEvent): void {
     mobileMenuIsOpen = event.detail;
-    if (mobileMenuIsOpen) setOpacity(".menu-links", 1, 0.2);
-    if (!mobileMenuIsOpen) setOpacity(".menu-links", 0, 0.15);
+    mobileMenuIsOpen
+      ? setOpacity(".menu-links", 1, 0.2)
+      : setOpacity(".menu-links", 0, 0.2);
   }
 </script>
 
