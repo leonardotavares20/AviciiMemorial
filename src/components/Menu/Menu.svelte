@@ -26,7 +26,6 @@
       align-self: center
       align-items: center
       gap: $sp-lg-2x
-      opacity: 1
       list-style-type: none
 
     .menu-socials
@@ -46,23 +45,23 @@
     @media screen and (max-width: $tb-md)
       .menu-links
         display: flex
+        opacity: 0
         flex-direction: column
         bottom: 0
         align-items: center
         align-content: center
         gap: 30px
+        visibility: hidden
         z-index: -1
         left: 0    
-        opacity: 0
         pointer-events: none
         width: 100vw
         height: 100vh
-        background: black
         position: fixed
+        background: black
 
       .menu-mobile
         pointer-events: all
-        opacity: 1
 
       .menu-socials
         justify-content: center
