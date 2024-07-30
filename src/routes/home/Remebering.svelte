@@ -48,16 +48,17 @@
         align-items: center
 
     .remembering-content
-        width: 60%
+        width: clamp(min(90%, 400px), 90%, max(35vw, 650px))
+        font-size: clamp(0.8rem, 1rem, 2vw)
         display: grid
         opacity: 0
         gap: $sp-md-2x
         justify-items: center
         text-align: center
-        max-width: 650px
 
     .remembering-content__title
         padding-bottom: $sp-sm
+        width: 90%
 
     .remembering-content__text
         line-height: 27px
