@@ -58,7 +58,6 @@
       user-select: none
       color: $white
       contain: content
-      // container-type: inline-size
       content-visibility: visible
       container-name: memory-container
       overflow: hidden
@@ -75,6 +74,8 @@
       background: linear-gradient(to bottom, transparent, black)
 
     .memory-container__banner
+      width: 100%
+      height: 100%
       transition: 0.2s
       object-position: 12% -2.40rem
       object-fit: cover
