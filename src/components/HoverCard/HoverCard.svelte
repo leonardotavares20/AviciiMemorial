@@ -64,7 +64,6 @@
           width: 202px
           display: grid
           justify-content: center
-          pointer-events: all
 
         .hoverCard
           opacity: 1
