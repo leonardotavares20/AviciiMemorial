@@ -58,21 +58,12 @@
       user-select: none
       color: $white
       contain: content
-      container-type: inline-size
+      // container-type: inline-size
       content-visibility: visible
-      container-name: menu-container
+      container-name: memory-container
       overflow: hidden
       height: 110vh
 
-    @container menu-container (max-width: 1024px)
-      .memory-container__banner
-          width: 120%
-          height: 110%
-          margin-top: 20px
-          transition: 0.2s
-
-      .memory-container__overlay
-          height: 10%
 
     .memory-container__overlay
       position: absolute
@@ -84,8 +75,6 @@
       background: linear-gradient(to bottom, transparent, black)
 
     .memory-container__banner
-      width: 100%
-      height: 110%
       transition: 0.2s
       object-position: 12% -2.40rem
       object-fit: cover
@@ -100,15 +89,9 @@
       container-type: inline-size
       container-name: titles
       position: absolute
-      bottom: calc(15% + 5px)
+      bottom: 15%
       justify-content: center
 
-    @container titles (max-width: 768px)
-      .memory-container__text
-        padding-top: 0.5rem
-
-      .memory-container__name
-        padding-top: $sp-lg-1x
 
     .memory-container__titles-content
       display: flex
@@ -135,4 +118,34 @@
       padding-top: $sp-lg-3x
       opacity: 0
       max-width: 130px
+
+    @media screen and (max-width: 1024px)
+      .memory-container
+        height: 100vh
+
+      .memory-container__banner
+        width: 120%
+        height: 120%
+        margin-top: 30px
+        transition: 0.2s
+
+    @container memory-container (max-width: 1024px)
+      .memory-container__banner
+        width: 120%
+        height: 120%
+        margin-top: 30px
+        transition: 0.2s
+
+      .memory-container__overlay
+        height: 10%
+
+    @container titles (max-width: 768px)
+      .memory-container__titles-content
+        transform: translateY(35px)
+
+      .memory-container__text
+        padding-top: 0.5rem
+
+      .memory-container__name
+        padding-top: 35px
 </style>
