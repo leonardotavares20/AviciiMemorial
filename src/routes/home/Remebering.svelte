@@ -37,6 +37,7 @@
 <style lang="sass">
     @import '@/styles/variables/_color'
     @import '@/styles/variables/_spacing'
+    @import '@/styles/variables/_media'
 
     .remembering-container
         color: $white
@@ -62,4 +63,9 @@
 
     .remembering-content__text
         line-height: 27px
+
+    @media screen and (max-width: $tb-md)
+      .remembering-container
+        height: 450px
+
 </style>
