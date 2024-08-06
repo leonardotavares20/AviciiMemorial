@@ -1,19 +1,17 @@
 <script>
+  import { menuSocials } from "@/lib/assets/menu-socials/menu-socials";
+  
   import Menu from "../Menu/Menu.svelte";
   import Anchor from "../Anchor/Anchor.svelte";
 </script>
 
 <div class="menu-socials">
   <Menu menuSocials>
-    <Anchor href={"/"}>
-      <img class="menu-socials__icon" src="/iconsSocials/spotify.svg" alt="Spotify" />
-    </Anchor>
-    <Anchor href={"/"}>
-      <img class="menu-socials__icon" src="/iconsSocials/youtube.svg" alt="Youtube" />
-    </Anchor>
-    <Anchor href={"/"}>
-      <img class="menu-socials__icon" src="/iconsSocials/apple.svg" alt="Apple Music" />
-    </Anchor>
+    {#each menuSocials as { alt, href, src }}
+      <Anchor {href}>
+        <img class="menu-socials__icon" {src} {alt} />
+      </Anchor>
+    {/each}
   </Menu>
 </div>
 
