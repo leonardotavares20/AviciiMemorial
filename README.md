@@ -12,7 +12,7 @@ Miss you Tim❤️
 - Lenis - Scroll Lib
 
 ## DevDependencies
-- Svelte - Framework
+- Svelte - v4 - Framework
 - SvelteKit - Svelte Framework
 - Vite - Build
 - Sass - Preprocessor CSS
