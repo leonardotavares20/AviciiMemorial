@@ -40,7 +40,7 @@
     text-align: center
     line-height: 25px
     text-transform: uppercase
-    padding: 30px 200px
+    // padding: 30px 200px
 
   .footer__link-repo
     text-decoration: underline
