@@ -40,7 +40,8 @@
 
     .subtitle--medium
         max-width: 530px
-        font-size: $ft-md-2x
+        padding: 0 30px
+        font-size: clamp(1rem, $ft-md-3x, 1.25vw)
 
     .subtitle--small
         max-width: 300px

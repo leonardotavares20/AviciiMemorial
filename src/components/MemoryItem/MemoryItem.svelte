@@ -24,7 +24,7 @@
     
     .memory__message
       line-height: $sp-md
-      font-size: $ft-sm-3x
+      font-size: clamp(0.7rem, $ft-md-3x, 0.7vw)
       margin: $sp-lg 0px
       align-self: flex-start
 
