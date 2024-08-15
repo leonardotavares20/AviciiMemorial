@@ -67,5 +67,5 @@
     @media screen and (max-width: $tb-md)
       .remembering-container
         height: 450px
-
+        margin-bottom: $sp-lg-2x
 </style>
