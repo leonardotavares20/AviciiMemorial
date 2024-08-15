@@ -5,8 +5,8 @@
   import { memories } from "$lib/assets/memories/memories";
   import SubTitle from "@/components/SubTitle/SubTitle.svelte";
   import MemoryItem from "@/components/MemoryItem/MemoryItem.svelte";
-  import { ScrollMemories } from "$lib/assets/animations/scroll/ScrollMemories";
   import Pagination from "@/components/Pagination/Pagination.svelte";
+  import { ScrollMemories } from "$lib/assets/animations/scroll/ScrollMemories";
 
   onMount(() => {
     const scroll = new ScrollMemories();

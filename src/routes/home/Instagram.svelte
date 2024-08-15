@@ -24,6 +24,7 @@
 <style lang="sass">
     @import '@/styles/variables/_color'
     @import '@/styles/variables/_spacing'
+    @import '@/styles/variables/_media'
 
     .section-instagram
         margin: auto
@@ -31,4 +32,8 @@
         opacity: 0
         margin-top: 10rem
         padding-bottom: 5rem
+
+    @media screen and (max-width: $mb-md)
+      .section-instagram
+          margin-top: 5rem
 </style>
