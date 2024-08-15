@@ -38,8 +38,8 @@
   });
 </script>
 
-<section class:share-container--open={$formOpen} class="share-container">
-  <div id="share-form" class="share-form">
+<section id="share-section" class:share-container--open={$formOpen} class="share-container">
+  <div class="share-form">
     <img
       id="share-form__background"
       class="share-container__background"

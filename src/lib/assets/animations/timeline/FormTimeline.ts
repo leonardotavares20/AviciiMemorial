@@ -34,7 +34,7 @@ export class FormTimeline extends BaseTimeline {
             gsap.to(window, {
               duration: 0.5,
               ease: "sine",
-              scrollTo: "#share-form__background",
+              scrollTo: "#share-section",
             });
           },
         },
