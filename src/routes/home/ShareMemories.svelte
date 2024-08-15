@@ -137,8 +137,9 @@
 
       .share-form__container
         height: 60vh
+        width: 100vw
 
-      // .share-container--open
-      //   height: 800px
-      //   transition: 0.5s
+    @media screen and (max-width: $mb-sm)
+      .share-form__form
+        width: 80vw
 </style>

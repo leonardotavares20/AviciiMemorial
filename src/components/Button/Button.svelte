@@ -90,7 +90,12 @@
 
     @media screen and (max-width: $mb-lg)
         .button--share-form
-            width: 340px
-            height: 50px
-            font-size: $ft-sm-4x
+          width: 340px
+          height: 50px
+          font-size: $ft-sm-4x
+
+    @media screen and (max-width: $mb-sm)
+        .button--share-form
+          width: 80vw
+          padding: 0 5px
 </style>
