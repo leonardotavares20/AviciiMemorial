@@ -30,8 +30,14 @@
 
 <style lang="sass">
     @import '@/styles/variables/_color'
+    @import '@/styles/variables/_spacing'
+    @import '@/styles/variables/_media'
 
     .memories-section
       margin: auto
       color: $white
+
+    @media screen and (max-width: $tb-md)
+      .memories-section
+        margin-top: $sp-lg-5x
 </style>

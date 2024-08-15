@@ -6,6 +6,7 @@
   import TextArea from "../TextArea/TextArea.svelte";
   import { setOpacity } from "@/lib/helpers/setOpacity";
   import { setPreview, resetFileInput } from "$lib/helpers/form";
+  import { formOpen } from "@/lib/stores/form-share";
 
   export let timeline: gsap.core.Timeline;
 
@@ -22,6 +23,7 @@
   function hideForm(): void {
     timeline.reverse();
     setOpacity("#share-form__background", 1, 0.3);
+    formOpen.set(false);
   }
 
   function handlePreviewImage(event: Event): void {
@@ -92,6 +94,7 @@
   @import '@/styles/variables/_color'
   @import '@/styles/variables/_spacing'
   @import '@/styles/variables/_font'
+  @import '@/styles/variables/_media'
 
   .share-form__characters
     font-size: $ft-sm-2x
@@ -127,4 +130,8 @@
     font-style: italic
     color: $light-gray
     margin-bottom: 2.5rem
+
+  @media screen and (max-width: $mb-lg)
+    .share-form__characters
+      align-self: center
 </style>

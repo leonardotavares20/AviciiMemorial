@@ -8,7 +8,10 @@
   import { setOpacity } from "@/lib/helpers/setOpacity";
   import { ScrollShare } from "@/lib/assets/animations/scroll/ScrollShare";
   import { FormTimeline } from "@/lib/assets/animations/timeline/FormTimeline";
-  import { scrollFormAnimationCompleted } from "$lib/stores/form-share";
+  import {
+    scrollFormAnimationCompleted,
+    formOpen,
+  } from "$lib/stores/form-share";
 
   let timeline: gsap.core.Timeline;
 
@@ -16,6 +19,7 @@
     if (!$scrollFormAnimationCompleted) return;
     timeline.play();
     setOpacity("#share-form__background", 0, 0.3);
+    formOpen.set(true);
   }
 
   onMount(() => {
@@ -34,7 +38,7 @@
   });
 </script>
 
-<section class="share-container">
+<section class:share-container--open={$formOpen} class="share-container">
   <div id="share-form" class="share-form">
     <img
       id="share-form__background"
@@ -42,7 +46,10 @@
       src="/world/worldmap.jpeg"
       alt="World Map"
     />
-    <div class="share-form__container">
+    <div
+      class="share-form__container"
+      class:share-container__container--open={$formOpen}
+    >
       <Button
         id="share-form__button"
         on:clickButton={showForm}
@@ -66,11 +73,15 @@
 
 <style lang="sass">
     @import '@/styles/variables/_color'
+    @import '@/styles/variables/_media'
 
     .share-container
       position: relative
       height: 100%
-      background: $white
+      width: 100%
+      height: 110vh
+      transition: 0.3s
+      transform-origin: center
 
     .share-form
       width: 100%
@@ -87,15 +98,47 @@
       align-items: center
 
     .share-container__background
-      width: 100%
+      width: 100vw
+      height: 100vh
+      object-fit: cover
       z-index: 1
+      position: absolute
       opacity: 0
 
     .share-form__container
       width: 100%
-      position: absolute
+      height: 100vh
+      // background: red
+      top: 0
+      z-index: 5
+      position: relative
       display: grid
       justify-items: center
-      bottom: 50%
-      transform: translateY(45%)
+      align-content: center
+  
+
+    @media screen and (max-width: $mb-lg)
+      .share-form__form
+        width: 300px
+
+      .share-container
+        height: 60vh
+        display: grid
+        align-items: center
+
+      .share-container--open
+        height: 110vh
+
+      .share-container__container--open
+        height: 100vh
+
+      .share-container__background
+        height: 60vh
+
+      .share-form__container
+        height: 60vh
+
+      // .share-container--open
+      //   height: 800px
+      //   transition: 0.5s
 </style>
