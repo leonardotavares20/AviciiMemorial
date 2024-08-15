@@ -29,6 +29,7 @@
 
 <style lang="sass">
     @import '@/styles/variables/_color'
+    @import '@/styles/variables/_media'
   
     .instagram-card
       position: relative
@@ -54,4 +55,17 @@
       width: 100%
       object-fit: cover
       height: 100%
+
+    @media screen and (max-width: $mb-lg)
+      .instagram-card
+        height: 150px
+        min-height: 100px
+        margin-bottom: 25px
+
+      .instagram-card__background
+        height: 180px
+
+      // .instagram-card__icon
+      //   width: 20px
+
 </style>
