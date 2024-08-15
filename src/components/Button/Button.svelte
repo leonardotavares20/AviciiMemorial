@@ -35,6 +35,7 @@
     @import '@/styles/variables/_border'
     @import '@/styles/variables/_spacing'
     @import '@/styles/variables/_font'
+    @import '@/styles/variables/_media'
 
     .button
         background: $black
@@ -86,4 +87,10 @@
         font-size: $ft-sm-4x
         border-color: $white
         margin-bottom: $sp-sm-1x
+
+    @media screen and (max-width: $mb-lg)
+        .button--share-form
+            width: 340px
+            height: 50px
+            font-size: $ft-sm-4x
 </style>
