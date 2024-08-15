@@ -137,7 +137,6 @@
 
       .share-form__container
         height: 60vh
-        width: 100vw
 
     @media screen and (max-width: $mb-sm)
       .share-form__form
