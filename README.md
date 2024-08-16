@@ -2,7 +2,7 @@
 
 ![Alt Text](./static/readme.png)
 
-This is a personal project, which I am using to learn and train what I know in Svelte. <br>
+This is a personal project, which I am using to learn and train what I know in Svelte. <br> <strong>This is NOT the original project, it is just a case study, this is the original project: </strong> <a href="https://avicii.com/" target="_blank" a>Avicii.com</a> <br>
 Miss you Tim❤️
 
 ## Dependencies
@@ -12,7 +12,7 @@ Miss you Tim❤️
 - Lenis - Scroll Lib
 
 ## DevDependencies
-- Svelte - Framework
+- Svelte - v4 - Framework
 - SvelteKit - Svelte Framework
 - Vite - Build
 - Sass - Preprocessor CSS
