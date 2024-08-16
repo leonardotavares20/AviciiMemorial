@@ -64,7 +64,6 @@
       overflow: hidden
       height: 110vh
 
-
     .memory-container__overlay
       position: absolute
       z-index: 10

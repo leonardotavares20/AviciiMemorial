@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { clickOutsideAction } from "svelte-legos";
+
   export let options: Array<{ name: string; value: string }>;
   export let name: string;
 </script>
