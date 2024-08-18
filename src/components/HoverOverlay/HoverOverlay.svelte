@@ -1,5 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
+  import { selectFocused } from "@/lib/stores/form-header";
 
   const dispatch = createEventDispatcher();
 
@@ -8,6 +9,9 @@
   };
 
   const mouseLeaveAncor = (event: Event): void => {
+    if ($selectFocused) {
+      return;
+    }
     dispatch("mouseLeaveAnchor");
   };
 </script>

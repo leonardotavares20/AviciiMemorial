@@ -1,11 +1,25 @@
 <script lang="ts">
-  export let mouseEnterOverlay: boolean = true;
+  export let mouseEnterOverlay: boolean = false;
   import { mediaQuery } from "svelte-legos";
+  import { clickOutsideAction } from "svelte-legos";
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
 
   let isTabletScreen = mediaQuery("(max-width: 1024px)");
+
+  const clickOutForm = () => {
+    dispatch("clickoutside");
+  };
 </script>
 
-<div class="overlay" class:overlay--pointerEvent={mouseEnterOverlay}>
+<div
+  aria-hidden="true"
+  class="overlay"
+  use:clickOutsideAction
+  on:clickoutside={clickOutForm}
+  class:overlay--pointerEvent={mouseEnterOverlay}
+>
   <div class="hoverCard" class:hoverCard--visible={mouseEnterOverlay}>
     {#if !$isTabletScreen}
       <img
@@ -26,7 +40,7 @@
     @import '@/styles/variables/_media'
 
     .overlay
-      height: 100px
+      height: 200px
       position: absolute
       width: 202px
       display: grid
