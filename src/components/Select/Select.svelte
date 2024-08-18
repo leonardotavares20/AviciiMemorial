@@ -1,12 +1,25 @@
 <script lang="ts">
-  import { clickOutsideAction } from "svelte-legos";
-
   export let options: Array<{ name: string; value: string }>;
   export let name: string;
+  import { selectFocused } from "@/lib/stores/form-header";
+
+  function clickOutsideAction() {
+    selectFocused.set(false);
+  }
+
+  function clickInsideAction() {
+    selectFocused.set(true);
+  }
 </script>
 
 <div class="select">
-  <select class="select__field" {name} id="">
+  <select
+    on:focus={clickInsideAction}
+    on:focusout={clickOutsideAction}
+    class="select__field"
+    {name}
+    id=""
+  >
     <option class="select__option" disabled selected value="0"
       >Select Country</option
     >

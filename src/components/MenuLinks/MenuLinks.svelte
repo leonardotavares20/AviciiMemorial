@@ -7,6 +7,7 @@
   import ButtonMobile from "../ButtonMobile/ButtonMobile.svelte";
   import { setOpacity } from "@/lib/helpers/setOpacity";
   import { mediaQuery } from "svelte-legos";
+  import { selectFocused } from "@/lib/stores/form-header";
 
   const isTabletScreen = mediaQuery("(max-width: 1024px)");
   let mouseIsOver: boolean = false;
@@ -16,8 +17,19 @@
     mouseIsOver = true;
   }
 
+  let formFocused = false;
+
+  $: if (!$selectFocused && formFocused) {
+    mouseIsOver = false;
+    formFocused = false;
+  }
+
   function mouseLeave(event: CustomEvent): void {
     mouseIsOver = false;
+  }
+
+  function formOutFocus(event: CustomEvent): void {
+    formFocused = true;
   }
 
   function handleToggleButton(event: CustomEvent): void {
@@ -40,7 +52,7 @@
       on:mouseLeaveAnchor={mouseLeave}
     >
       <Anchor href="" ancorMenu>Join The Community</Anchor>
-      <HoverCard mouseEnterOverlay={mouseIsOver}>
+      <HoverCard on:clickoutside={formOutFocus} mouseEnterOverlay={mouseIsOver}>
         <FormHeader />
       </HoverCard>
     </HoverOverlay>
