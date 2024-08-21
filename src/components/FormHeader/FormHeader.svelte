@@ -23,7 +23,7 @@
   onMount(() => {
     let countriesRequest = new CountryRequest(
       "https://countriesnow.space/api/v0.1/countries",
-      {}
+      {},
     );
 
     countriesRequest.fetchCountries().then((response) => {
@@ -35,7 +35,7 @@
   });
 </script>
 
-<form action="" class="formCard">
+<form method="POST" action="?/submitFormHeader"  class="formCard">
   <Select options={countries} name="country" />
   <div class="formCard__column">
     <Input type="email" name="email" placeholder="E-Mail" />
