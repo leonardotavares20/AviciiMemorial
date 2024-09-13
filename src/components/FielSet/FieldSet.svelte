@@ -12,6 +12,7 @@
     .fieldset-share-form
         display: flex
         gap: $sp-sm-1x
+        color: black
         justify-content: center
         margin-bottom: $sp-md-2x
         align-items: center
