@@ -7,10 +7,14 @@
   import Button from "../Button/Button.svelte";
   import Label from "../Label/Label.svelte";
   import { onMount } from "svelte";
+  import { page } from "$app/stores";
+  import { enhance } from "$app/forms";
 
   let countries: Array<{ name: string; value: string }> = [];
 
   let hoverLabel: boolean = false;
+
+  $: console.log($page.form);
 
   const mouseEnterLabel = (): void => {
     hoverLabel = true;
@@ -35,7 +39,7 @@
   });
 </script>
 
-<form method="POST" action="?/submitFormHeader"  class="formCard">
+<form method="POST" action="?/submitFormHeader" use:enhance class="formCard">
   <Select options={countries} name="country" />
   <div class="formCard__column">
     <Input type="email" name="email" placeholder="E-Mail" />
