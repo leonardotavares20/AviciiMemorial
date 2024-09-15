@@ -1,20 +1,40 @@
-import { redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types.js";
+import { schemaFormHeader } from "$lib/helpers/schemas.js";
 
 export const prerender = false;
 
-export const actions = {
-  async submitFormHeader({ request }) {
-    const formData = await request.formData();
+/** @type {import('./$types').Actions} */
+export const actions: Actions = {
+  // submitFormMemories: async ({ request }) => {
+  //   // const formData = await request.formData();
+
+  //   return redirect(302, "/");
+  // },
+
+  submitFormHeader: async ({ request }) => {
+    const formData = Object.fromEntries(await request.formData());
+
     console.log(formData);
 
-    return redirect(302, "/");
-  },
+    try {
+      const result = schemaFormHeader.parse(formData);
 
-  async submitFormMemories({ request }) {
-    const formData = await request.formData();
-    console.log(formData);
+      return {
+        formHeader: {
+          result,
+        },
+      };
+    } catch (e) {
+      const { fieldErrors } = e.flatten();
 
-    return redirect(302, "/");
+      const { email, country, policy } = formData;
+
+      return {
+        formHeader: {
+          fieldErrors,
+          formData: { email, country, policy },
+        },
+      };
+    }
   },
 } satisfies Actions;
