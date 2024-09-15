@@ -4,7 +4,6 @@
   export let placeholder: string = "";
   export let disabled: boolean = false;
   export let value: string = "";
-  export let pattern: string = "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$";
   export let input: HTMLInputElement | string = "";
 
   export let white: boolean = false;
@@ -20,7 +19,6 @@
   {value}
   {disabled}
   {placeholder}
-  {pattern}
   autocomplete="off"
   class:input--white={white}
   class:input--borderWhite={borderWhite}
